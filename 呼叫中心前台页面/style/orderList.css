@@ -1,0 +1,22 @@
+.main_right{padding:20px;position:absolute;left:210px;top:0px;min-width:1150px;}
+/*主体右侧-首行*/
+.firstRow,.secondRow{line-height:50px;height:50px;}
+.firstRowInput{width:180px;height:30px;border:1px solid #a6ba76;border-radius:5px;margin-left:20px;}
+.firstStatus{width:100px;height:30px;border:1px solid #a6ba76;border-radius:5px;margin-left:20px;}
+.firstRow .name,.number,.status{margin-left:33px;}
+/*主体右侧-第二行*/
+.secondTime{width:115px;height:30px;border:1px solid #a6ba76;border-radius:5px;margin-left:10px;margin-right:10px;}
+.secondBtn{display:inline-block;width:80px;height:30px;line-height:30px;background:#327e33;color:#fff;text-align:center;border-radius:5px;margin-right:20px;}
+.secondRow .search{margin-left:310px;}
+/*主体右侧-表格*/
+.main_right table{width:100%;text-align:center;border:1px solid #bfbfbf;border-collapse: collapse;margin-top:20px;}
+.main_right table th{background:#dff0d8;}
+.main_right table tr th, td{border-top:1px solid #bfbfbf;border-bottom:1px solid #bfbfbf;height:44px;}
+.main_right table tr th{height:54px;}
+.main_right table tr:nth-child(odd){background:#efeeee;}
+.main_right table td:last-child a{color:#327e33;margin-right:5px;}
+/*页码*/
+.main_right .page{text-align:center;margin:20px;}
+.page a{display:inline-block;border:1px solid #e8e8e8;text-decoration:none;margin:5px;padding:5px 10px;}
+.page a:link,.page a:visited{color:#000;}
+.page a:hover,.page a:active{color:#fff;background-color:#327e33;}

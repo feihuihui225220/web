@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>newOrder</title>
+    <link href="style/common.css" rel="stylesheet" type="text/css">
+    <link href="style/newOrder.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <span class="indexName fl">呼叫中心</span>
+        <div class="fl callin">
+            <input type="text" name="" class="textbox" placeholder="18542697214">
+            <a href="#" class="telePic"><img src="images/tele.png"></a>
+        </div>
+        <div class="h_right fl">
+            <label class="font1">当前账号:</label>
+            <span class="font1 account">1234</span>
+            <label class="font1">登录ip:</label>
+            <span class="font1 ip">192.168.0.1</span>
+            <a href="#" class="font2">修改密码</a>
+            <a href="#" class="font2 quit">退出</a>
+        </div>
+    </div>
+    <div class="main clearfix">
+        <div class="main_left fl">
+            <ul class="parent">
+                <li>
+                    <a href="#" class="client">客户管理<img src="images/arrow.png" class="img1"></a>
+
+                    <ul class="child">
+                        <li><a href="clientList.html">客户列表</a></li>
+                        <li><a href="newClient.html">新增客户</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#" class="order select">订单管理<img src="images/arrow.png" class="img1"></a>
+                    <ul class="child">
+                        <li><a href="orderList.html">订单列表</a></li>
+                        <li><a href="#">查看订单</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="main_right fl">
+            <div class="orderInfo">
+            <table>
+                <tr>
+                    <td class="col1">服务名称:</td>
+                    <td><input type="text" class="boxset" /></td>
+                    <td class="col1">服务类别:</td>
+                    <td><input type="text" class="boxset" /></td>
+                </tr>
+                <tr>
+                    <td class="col1">联系号码:</td>
+                    <td><input type="text" class="boxset" /></td>
+                    <td class="col1">客户姓名:</td>
+                    <td><input type="text" class="boxset"/></td>
+                </tr>
+                <tr>
+                    <td class="col1">客户年龄:</td>
+                    <td><input type="text" class="boxset"/></td>
+                    <td class="col1">身份证号:</td>
+                    <td><input type="text" class="boxset"/></td>
+                </tr>
+                <tr>
+                    <td class="col1">联系人姓名:</td>
+                    <td><input type="text" class="boxset"/></td>
+                    <td class="col1">联系人电话:</td>
+                    <td><input type="text" class="boxset"/></td>
+                </tr>
+                <tr>
+                    <td class="col1">呼入电话:</td>
+                    <td><input type="text" class="boxset"/></td>
+                </tr>
+                <tr>
+                    <td class="col1">服务周期:</td>
+                    <td colspan="3">
+                    <input type="radio" checked="checkbox" /><label class="font16">一日</label>
+                    <input type="radio" /><label class="font16">一个月</label>
+                    <input type="radio" /><label class="font16">三个月</label>
+                    <input type="radio" /><label class="font16">六个月</label>
+                    <input type="radio" /><label class="font16">九个月</label>
+                    <input type="radio" /><label class="font16">一年</label>
+                    <input type="radio" /><label class="font16">其他</label><input type="text" class="otherset" /><label class="font16">日</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col1">服务时间:</td>
+                    <td><input type="date" class="timeset" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <select class="timeset">
+                            <option>09:00-09:30</option>
+                            <option>09:30-10:00</option>
+                            <option>10:00-10:30</option>
+                            <option>10:30-11:00</option>
+                            <option>11:00-11:30</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col1">地址:</td>
+                    <td colspan="3">
+                    <select class="addressSet"><option>北京</option></select><label class="font16">市</label>
+                        <select class="addressSet"><option>东城</option></select><label class="font16">区</label>
+                        <select class="addressSet"><option>新丰</option></select><label class="font16">街道</label>
+                        <select class="addressSet"><option>新丰</option></select><label class="font16">社区/村</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col1">详细地址:</td>
+                    <td colspan="3">
+                        <textarea class="textareaSet"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col1">备注:</td>
+                    <td colspan="3">
+                        <textarea class="textareaSet"></textarea>
+                    </td>
+                </tr>
+            </table>
+            </div>
+            <div class="btn">
+                <a href="#" class="submit">提交</a>
+                <a href="#" class="cancel">取消</a>
+            </div>
+            <a href="index.html" class="return">返回</a>
+        </div>
+
+    </div>
+</body>
+
+</html>
