@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>用户管理</title>
+    <link href="style/common.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="style/common1.css">
+    <link rel="stylesheet" type="text/css" href="style/userManager.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/userManager.js"></script>
+</head>
+
+<body>
+<div class="header clearfix">
+  <div class="logo fl">羊坊店街道医养结合服务平台</div>
+  <div class="set fr"><a href="#" class="wel">欢迎您</a><span class="line"></span><a href="#" class="setpassword">修改密码</a><span class="line"></span><a href="#">退出</a></div>
+</div>
+<div class="main">
+   <div class="main_left fl">
+      <ul class="sidebar">
+        <li><a href="index.html">今日任务&nbsp;></a></li>
+        <li><a href="userManager.html" class="active">用户管理&nbsp;></a></li>
+      </ul>
+   </div>
+   <div class="main_right">
+    <div class="wrapLeft_um">
+      <div class="rightTitle">
+        <input type="text" name="" class="inputSize" placeholder="按姓名查找">
+        <label class="">日期:</label>
+        <input type="date" name="" class="inputSize">
+        <label>至:</label>
+        <input type="date" name="" class="inputSize">
+        <select class="selectSize">
+          <option>待建档</option>
+          <option>正常巡诊</option>
+          <option>转诊</option>
+          <option>停诊</option>
+        </select>
+        <a href="#" class="btnBg">查询</a>
+        <a href="#" class="btnBg userUM">新用户登记</a>
+      </div>
+      <table width="80%" border="0" cellspacing="0" cellpadding="7" class="commonTable umtable">
+        <tr>
+          <th>序号</th>
+          <th>姓名</th>
+          <th>巡诊组医生</th>
+          <th>巡诊组护士</th>
+          <th>创建时间</th>
+          <th>登记人</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>李夫</td>
+          <td>张三</td>
+          <td>李四</td>
+          <td>2016-8-15 10:30</td>
+          <td>李四</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>李夫</td>
+          <td>张三</td>
+          <td>李四</td>
+          <td>2016-8-15 10:30</td>
+          <td>李四</td>
+        </tr>
+      </table> 
+      <div class="page_record">
+        <span>共有<span class="record">111</span>条记录，当前第<span class="page">1/9</span>
+      页</span>
+      </div>       
+   </div>  
+  </div>
+</div>
+<div class="t_mask"></div>
+<div class="addUser">
+  <div class="title">
+    <span class="fl span_add">添加用户</span>
+    <span class="fr close"></span>
+  </div>
+  <div class="userInfo">
+    <div><label class="addUser_span">姓名:</label><input type="text" name="" class="addUser_input"></div>
+    <div><label class="addUser_span">性别:</label><select class="addUser_select"><option>女</option><option>男</option></select></div>
+
+    <div><label class="addUser_span">年龄:</label><input type="text" name="" class="addUser_input"></div>
+    <div><label class="addUser_span">身份证号:</label><input type="text" name="" class="addUser_input"></div>
+    <div><label class="addUser_span">家庭住址:</label><input type="text" name="" class="addUser_input"></div>
+    <div><label class="addUser_span">联系电话:</label><input type="text" name="" class="addUser_input"></div>
+    <div><label class="addUser_span">社区:</label><select class="addUser_select1" style="margin-left:25px;"><option>北京市</option></select class="addUser_select1"><select class="addUser_select1"><option>北京市</option></select><select class="addUser_select1"><option>请选择</option></select><select class="addUser_select1"><option>请选择</option></select class="addUser_select1"></div>
+
+    <div><label class="addUser_span">用户状态:</label><select class="addUser_select"><option>待建档</option></select></div>
+    <div><label class="addUser_span">登记人:</label><label class="registerPerson">xunTest</label></div>
+  </div>
+  <a href="#" class="btnBg btnlg">确定</a>
+  <a href="#" class="btnBg btnBg1 cancel_all">取消</a>
+</div>
+<!-- 修改密码 -->
+<div class="modify">
+  <div class="title">
+    <span class="fl span_add">修改密码</span>
+    <span class="fr close"></span>
+  </div>
+  <div class="userInfo">
+    <p class="pass"><label>用户名:</label><input type="text" name=""></p>
+    <p class="pass"><label>原密码:</label><input type="text" name=""></p>
+    <p class="pass"><label>新密码:</label><input type="text" name=""></p>
+    <p class="pass"><label>确认密码:</label><input type="text" name=""></p>
+  </div>
+  <a href="#" class="btnBg btnlg">确定</a>
+  <a href="#" class="btnBg btnBg1 cancel_all">取消</a>
+</div>
+<div class="mask"></div>
+
+</body>
+
+</html>
