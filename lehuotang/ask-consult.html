@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>专业咨询</title>
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+    img {
+        height: auto;
+        width: auto\9;
+        width: 100%;
+    }
+    
+    .parentdiv {
+        position: relative;
+       
+    }
+
+    .recommend {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        background-color: red;
+    }
+    .p_item{height:30px;line-height:30px; margin-bottom:10px;}
+    .glyphicon{top:18px;right:10px;}
+    .usernum {
+        position: absolute;
+        right: -6px;
+        top: -17px;
+    }
+    .searchTitle{background-color:#ccc;height:50px;padding-top:8px;position:relative;}
+    .searchInput{padding-left:30px;}
+    .searchIcon{position:absolute;left:22px;top:19px;color:#ccc;}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 searchTitle">
+                <input type="text" class="form-control searchInput" placeholder="搜索">
+                <span class="glyphicon glyphicon-search searchIcon"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 parentdiv thumbnail ">
+                <img src="images/01.jpg">
+                <span class="badge recommend">推荐</span>
+                <p class="p_item">
+                    <span class="pull-left">疾病预防</span>
+                    <span class="pull-right glyphicon glyphicon-user">
+                      <i class="usernum">30251</i>
+                    </span>
+                </p>
+            </div>
+            <div class="col-xs-12 parentdiv thumbnail">
+                <img src="images/02.jpg">
+                <p class="p_item">
+                    <span class="pull-left">疾病预防</span>
+                    <span class="pull-right glyphicon glyphicon-user">
+                      <i class="usernum">30251</i>
+                    </span>
+                </p>
+            </div>
+            <div class="col-xs-12 parentdiv thumbnail">
+                <img src="images/03.jpg">
+                <p class="p_item">
+                    <span class="pull-left">疾病预防</span>
+                    <span class="pull-right glyphicon glyphicon-user">
+                      <i class="usernum">30251</i>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
