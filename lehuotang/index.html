@@ -6,40 +6,231 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>在线管家</title>
     <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="style/swiper.min.css">
+    <link rel="stylesheet" href="style/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="style/common.css">
     <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/toucher.js"></script>
+<!--     <script type="text/javascript" src="js/zepto.min.js"></script> -->
     <style type="text/css">
+    /*首页轮播*/
+    .carousel-indicators {
+        bottom: -8px;
+    }
+    .carousel-indicators li {border:1px solid #000;}
+    .carousel-indicators .active{background:red;}
+    #secondCarousel .carousel-indicators{bottom:-30px;}
+    .daohang{margin-top:15px;}
+
+    
+    /*线上评估轮播*/
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets{bottom:0;}
+    .swiper-slide a{display:block;}
+    .suolue h4{padding:20px 0;}
+  /*管家*/
+    .guanjia{margin-top:20px;}
+    .thumbnail{border:none;margin-bottom:0;}
+    .thumbnail .caption{text-align:center;}
     </style>
 </head>
+
 <body>
-    <!-- Swiper -->
-    <div class="swiper-container container-fluid">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="images/lunbo1.jpg"></div>
-            <div class="swiper-slide"><img src="images/lunbo2.jpg"></div>
-            <div class="swiper-slide"><img src="images/lunbo3.jpg"></div>
-            <div class="swiper-slide"><img src="images/lunbo4.jpg"></div>
+    <!-- 轮播图 -->
+    <div id="myCarousel" class="carousel slide both" data-ride="carousel">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" class="screen1">
+                <a href="#">
+                    <img src="images/lunbo1.jpg" alt="First slide">
+                </a>
+            </div>
+            <div class="item">
+                <a href="#" class="screen2">
+                    <img src="images/lunbo2.jpg" alt="Second slide">
+                </a>
+            </div>
+            <div class="item" class="screen3">
+                <a href="#">
+                    <img src="images/lunbo3.jpg" alt="Third slide">
+                </a>
+            </div>
+            <div class="item" class="screen4">
+                <a href="#">
+                    <img src="images/lunbo4.jpg" alt="Fourth slide">
+                </a>
+            </div>
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            </a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            </a>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
     </div>
+    <!-- 主页导航 -->
+    <div class="daohang container">
+        <div class="row">
+            <div class="col-xs-4 suolue">
+                <a href="course.html">
+                    <span class="glyphicon glyphicon-home"></span>
+                    <span>课程预览</span>
+                </a>
+            </div>
+            <div class="col-xs-4 suolue">
+                <a href="offlineActivityList.html">
+                    <span class="glyphicon glyphicon-th-list"></span>
+                    <span>线下沙龙</span>
+                </a>
+            </div>
+            <div class="col-xs-4 suolue">
+                <a href="vipGuide.html">
+                <span class="glyphicon glyphicon-user glyphicon"></span>
+                    <span>VIP定制</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- 线上评估 -->
+    <div class="online container">
+        <h4>线上评估</h4>
+        <div class="swiper-container container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide ">
+                    <a href="#" class="suolue">
+                        <img src="images/suolue1.jpg" >
+                        <h4>体适能评估</h4>
+                    </a>  
+                </div>
+                <div class="swiper-slide ">
+                    <a href="#" class="suolue">
+                        <img src="images/suolue2.jpg" >
+                        <h4>丢三落四</h4>
+                    </a>  
+                </div>
+                <div class="swiper-slide ">
+                    <a href="#" class="suolue">
+                        <img src="images/suolue3.jpg" >
+                        <h4>体适能评估</h4>
+                    </a>  
+                </div>
+                <div class="swiper-slide ">
+                    <a href="#" class="suolue">
+                        <img src="images/suolue4.jpg" >
+                        <h4>体适能评估</h4>
+                    </a>  
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="suolue">
+                        <img src="images/suolue5.jpg" >
+                        <h4>体适能评估</h4>
+                    </a>  
+                </div>
+                <div class="swiper-slide ">
+                    <a href="#" class="suolue">
+                        <img src="images/suolue6.jpg" >
+                        <h4>体适能评估</h4>
+                    </a>  
+                </div>
+            </div>
+        <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    
+    <!-- 管家汇 -->
+    <div class="guanjia container">
+        <h4>管家汇</h4>
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="thumbnail">
+              <img src="images/suolue.jpg">
+              <div class="caption">
+                <h3>刘康</h3>
+                <p>运动指导员</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="thumbnail">
+              <img src="images/suolue.jpg">
+              <div class="caption">
+                <h3>刘康</h3>
+                <p>运动指导员</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="thumbnail">
+              <img src="images/suolue.jpg">
+              <div class="caption">
+                <h3>刘康</h3>
+                <p>运动指导员</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="thumbnail">
+              <img src="images/suolue.jpg">
+              <div class="caption">
+                <h3>刘康</h3>
+                <p>运动指导员</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(function() {
+        $('#myCarousel').carousel({
+            interval: 3000
+        })
+        // 左右滑动
+        var myTouch = util.toucher(document.getElementById('myCarousel'));
+        myTouch.on('swipeLeft', function(e) {
+            $('.right').click();
+        }).on('swipeRight', function(e) {
+            $('.left').click();
+        });
+    })
+    </script>
 </body>
-    <!-- Swiper JS -->
     <script src="js/swiper.min.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
+        slidesPerView: 2,
         paginationClickable: true,
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: 2500,
-        autoplayDisableOnInteraction: false
+        spaceBetween: 30
     });
     </script>
 </html>
