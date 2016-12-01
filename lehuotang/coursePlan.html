@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>课程计划</title>
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel='stylesheet' href='style/fullcalendar.css' />
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src='js/moment.min.js'></script>
+    <script src='js/fullcalendar.js'></script>
+    <script src='js/zh-cn.js'></script>
+    <style type="text/css">
+    i{font-style:normal;font-size:12px;}
+    .container-fluid {
+        padding: 0;
+    }
+    .activityPic {
+        width: 100%;
+        height: 100%;
+    }
+    .serviceName,.packageName{height:40px;}
+    .note{width:80%;height:20%;margin:0 auto;position:absolute;left:10%;top:50%;z-index:1000;display:none;background:#fff;}
+    .cancelSuccess{position:absolute;width:100%;height:100px;top:50%;z-index:100;display:none;}
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <img src="images/activity.jpg" class="activityPic">
+    </div>
+    <div class="container">
+        <p class="serviceName">
+            <span>服务名称</span>
+            <button class="pull-right btn btn-default">专属定制</button>
+        </p>
+        <p class="packageName">
+            <span>套餐名称</span>
+            <button class="pull-right btn btn-info unsubscribe">取消订阅</button>
+        </p>
+    </div>
+    <div class="container-fluid">
+        <div id="calendar"></div>
+    </div>
+    <div class="container-fluid eventShow">
+        <span>11月14日&nbsp;星期一</span>
+        <div>
+            <p>
+                <span>体适能上肢训练</span>
+                <span class="pull-right">12分钟</span>
+            </p>
+            <p>
+                <span>手工园艺</span>
+                <span class="pull-right">20分钟</span>
+            </p>
+        </div>
+    </div>
+    <div class="mask"></div>
+    <div class="note">
+        <h3>提示</h3>
+        <div>您真的要取消订阅吗？</div>
+        <div class="container">
+            <button class="pull-left wrong">不小心按错了</button>
+            <button class="pull-right abandon">忍痛放弃订阅</button>
+        </div>
+    </div>
+    <div class="cancelSuccess"></div>
+</body>
+<script>
+$(document).ready(function() {
+// 取消订阅
+    $('.unsubscribe').click(function(){
+        showMask();
+        $('.note').show();
+    })
+    $('.wrong').click(function(){
+        hideMask();
+        $('.note').hide();
+    })
+    $('.abandon').click(function(){
+        $('.note').hide();
+        // $('.mask').css({'background':'url(images/cancelSuccess.png) no-repeat center center'});
+        $('.cancelSuccess').show();
+        $('.cancelSuccess').css({'background':'url(images/cancelSuccess.png) no-repeat center center'});
+        
+    })
+      function showMask(){     
+        $(".mask").css("height",$(document).height());     
+        $(".mask").css("width",$(document).width());     
+        $(".mask").show();     
+    }  
+    //隐藏遮罩层  
+    function hideMask(){     
+        $(".mask").hide();     
+    }  
+//日历 
+        var d = new Date();
+        var str = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            defaultDate: str,
+            defaultView: 'month',
+            editable: true,
+            events: [
+                {
+                    title: 'All Day Event',
+                    start: '2016-10-01'
+                },
+                {
+                    title: 'Long Event',
+                    start: '2016-10-09',
+                    end: '2016-10-10'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2016-10-20T16:00:00'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2014-06-16T16:00:00'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2014-06-12T10:30:00',
+                    end: '2014-06-12T12:30:00'
+                },
+                {
+                    title: 'Lunch',
+                    start: '2014-06-12T12:00:00'
+                },
+                {
+                    title: 'Birthday Party',
+                    start: '2014-06-13T07:00:00'
+                },
+                {
+                    title: 'Click for Google',
+                    url: 'http://google.com/',
+                    start: '2014-06-28'
+                }
+            ]
+        });  
+})
+</script>
+
+</html>

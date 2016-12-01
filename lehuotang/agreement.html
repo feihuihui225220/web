@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>企业与用户协议</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <style>
+    .agreement{margin:20px auto;}
+    .agreement p{text-indent:2em;}
+    .agreement h4{margin-bottom:10px auto;}
+    </style>
+</head>
+<body>
+<div class="container agreement">
+  <h4>一、重要须知</h4>
+  <p>"I care"在此特别提醒用户认真阅读、充分理解本《服务协议》（下称《协议》）--- 用户应认真阅读、充分理解本《协议》中各条款，包括免除或者限制““I care””责任的免责条款及对用户的权利限制条款。请您审慎阅读并选择接受或不接受本《协议》（未成年人应在法定监护人陪同下阅读）。除非您接受本《协议》所有条款，否则您无权登录或使用本协议所涉相关服务。您的登录、使用等行为将视为对本《协议》的接受，并同意接受本《协议》各项条款的约束。</p>
+  <p>本《协议》是您（下称“用户”）与“I care”之间关于使用“I care”移动互联网服务所订立的协议。本《协议》描述“I care”与用户之间关于“I care”服务相关方面的权利义务。“用户”是指使用、浏览本服务的个人或组织。 </p>
+  <h4>二、使用规则</h4>
+  <p>1、用户充分了解并同意，“I care”产品仅为用户提供信息分享、传送及获取的平台，I care产品所提供的信息及内容不应被视为医疗建议或医嘱，用户在使用I care时仍应从专业医疗机构获取专业治疗方案及手段。用户必须为自己账户下的一切行为负责，包括您所传送的任何内容以及由此产生的任何结果。用户应对“I care”所列的服务内容自行加以判断，并承担因使用内容而引起的所有风险，包括因对内容的正确性、完整性或实用性的依赖而产生的风险。“I care”无法且不会对因用户行为而导致的任何损失或损害承担责任。 </p>
+  <p></p>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+        <input type="checkbox" name="agree" id="agreeCheck">
+        <label>我同意以上企业与用户协议</label>
+    </div>
+  </div>
+</div>
+</body>
+<script>
+$(document).ready(function(){
+    $('#agreeCheck').on('change',function(){
+      window.location.href="order.html";
+    })
+})
+</script>
+</html>

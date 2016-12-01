@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>动态记录</title>
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+    .max {
+        width: 100%;
+        height: auto;
+    }
+    
+    .min {
+        width: 100px;
+        height: auto;
+    }
+    #bigPic{position:absolute;width:100%;height:100%;z-index:10;display:none;}
+    #bigPic img{width:100%;height:100%;}
+    </style>
+</head>
+
+<body>
+    <div class="smallPic">
+        <p class="clearfix">
+            <span href="#" class="pull-right deletePic">删除</span>
+            <span  class="pull-right clearAll">清空照片</span>
+        </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="images/zhanshi.jpg">
+                        <div class="caption text-center">
+                            <input type="checkbox" id="name1" name="picName" />
+                            <lable for="name1">月坛公园1</lable>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="images/zhanshi.jpg">
+                        <div class="caption text-center">
+                            <input type="checkbox" id="name2" name="picName" />
+                            <lable for="name2">月坛公园2</lable>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="images/zhanshi.jpg">
+                        <div class="caption text-center">
+                            <input type="checkbox" id="name3" name="picName" />
+                            <lable for="name3">月坛公园3</lable>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="images/zhanshi.jpg">
+                        <div class="caption text-center">
+                            <input type="checkbox" id="name4" name="picName" />
+                            <lable for="name4">月坛公园4</lable>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="images/zhanshi.jpg">
+                        <div class="caption text-center">
+                            <input type="checkbox" id="name1" name="picName" />
+                            <lable for="name1">月坛公园5</lable>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="images/zhanshi.jpg">
+                        <div class="caption text-center">
+                            <input type="checkbox" id="name2" name="picName" />
+                            <lable for="name2">月坛公园6</lable>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="images/zhanshi.jpg">
+                        <div class="caption text-center">
+                            <input type="checkbox" id="name3" name="picName" />
+                            <lable for="name3">月坛公园7</lable>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="images/zhanshi.jpg">
+                        <div class="caption text-center">
+                            <input type="checkbox" id="name4" name="picName" />
+                            <lable for="name4">月坛公园8</lable>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bigPic"><img src="" alt=""/></div>
+</body>
+<script>
+$(document).ready(function() {
+            var imgs = $('.smallPic img');
+            var lens = imgs.length;
+            var bigPic = document.getElementById("bigPic");
+
+            for (var i = 0; i < lens; i++) {
+                imgs[i].onclick = function(event) {
+                    event = event || window.event;
+                    var target = document.elementFromPoint(event.clientX, event.clientY);
+                    // showBig(target.src);
+                   $('.smallPic').hide();
+                   $('#bigPic').show();
+                   var src1=$(this).attr('src');
+                   $('#bigPic img').attr('src',src1);
+              
+                }
+            }
+            bigPic.onclick = function() {
+                bigPic.style.display = "none";
+                $('.smallPic').show();
+            }
+            // 清空所有
+            $('.clearAll').click(function(){
+                $(":checkbox").prop("checked",true);
+                if(confirm("确定要删除所有照片？"))
+                    {$('.smallPic').empty();}
+                else{
+
+                    $(":checkbox").prop("checked",false);
+                }
+            })
+            // 删除单张图片
+            $('.deletePic').click(function(){
+                var len=$("input[name='picName']:checked").length;
+                    if(len<1){alert('请至少选择一张照片！');}
+                    else
+                    {
+                        if(confirm("确定要删除所选的照片？"))
+                        {
+                            $("input[name='picName']:checked").parent().parent().parent().empty();
+                        }
+                        else{
+                         $(":checkbox").prop("checked",false);
+                        }
+                    }
+            
+                
+            })
+         
+})
+</script>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>填写用户信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <style>
+    .location{margin:20px auto 10px auto;border-top:1px solid #ccc;border-bottom:1px solid #ccc;height:40px;line-height:40px;}
+    .notnull{color:red;font-size:12px;}
+    </style>
+</head>
+<body>
+<div class="container-fluid location">
+    <span>1.定位您所在区域:</span>
+    <span class="notnull">*必填项</span>
+</div>
+<div class="container">
+  <span>2.详细地址:</span>
+  <textarea class="form-control" rows="4"></textarea>
+  <p>
+    <span>3.您的联系方式:</span>
+    <span class="notnull">*必填项</span>
+  </p>
+  <p>
+    <span>4.选择提供服务的有效时间:</span>
+    <button class="btn btn-default minus"  role="button">-</button>
+    <input class="btn btn-default textinput" type="button" value="1">
+    <button class="btn btn-default plus"  role="button">+</button>
+    月
+  </p>
+  <span class="notnull">*</span>
+  <span>您的服务有效期至<i class="year"></i>年<i class="month"></i>月<i class="day"></i>日,自付款当日起，有效天数为30天</span><br>
+  <span>5.请简单描述您的服务需求:</span>
+  <textarea class="form-control" rows="4"></textarea>
+  <button class="btn btn-info form-control payNow">立即支付</button>
+  
+</div>
+
+</body>
+<script type="text/javascript">
+  $(function(){
+    // 增1
+    $('.plus').click(function(){
+      var i=$('.textinput').val();
+      i++;
+      $('.textinput').val(i);
+      fun_submit(30*i);
+    })
+    // 减1
+    $('.minus').click(function(){
+      var i=$('.textinput').val();
+      if(i>1){
+        i--;
+      }
+      else{i=1;}
+      $('.textinput').val(i);
+      fun_submit(30*i);
+    })
+    // 时间计算
+ function fun_submit(arg){
+        var date1 = new Date();
+        var date2 = new Date(date1);
+        date2.setDate(date1.getDate()+arg);
+        var year=date2.getFullYear();
+        var month=date2.getMonth()+1;
+        var day=date2.getDate();
+        $('.year').html(year);
+        $('.month').html(month);
+        $('.day').html(day);
+      }
+      fun_submit(30);
+      $('.payNow').click(function(){
+        window.location.href="pay.html";
+      })
+  })
+</script>
+</html>

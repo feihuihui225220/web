@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>课程计划</title>
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel='stylesheet' href='style/fullcalendar.css' />
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src='js/moment.min.js'></script>
+    <script src='js/fullcalendar.js'></script>
+    <script src='js/zh-cn.js'></script>
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+<div class="container text-center">目前您还没有课程计划，请耐心等待</div>
+</body>
+<script>
+$(document).ready(function() {
+//日历 
+        var d = new Date();
+        var str = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            defaultDate: str,
+            defaultView: 'month',
+            editable: true,
+            events: [
+                {
+                    title: 'All Day Event',
+                    start: '2016-10-01'
+                },
+                {
+                    title: 'Long Event',
+                    start: '2016-10-09',
+                    end: '2016-10-10'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2016-10-20T16:00:00'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2014-06-16T16:00:00'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2014-06-12T10:30:00',
+                    end: '2014-06-12T12:30:00'
+                },
+                {
+                    title: 'Lunch',
+                    start: '2014-06-12T12:00:00'
+                },
+                {
+                    title: 'Birthday Party',
+                    start: '2014-06-13T07:00:00'
+                },
+                {
+                    title: 'Click for Google',
+                    url: 'http://google.com/',
+                    start: '2014-06-28'
+                }
+            ]
+        });
+        
+})
+</script>
+
+</html>

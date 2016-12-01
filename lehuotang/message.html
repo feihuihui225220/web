@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>通知消息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <style>
+    .edit {
+        height: 40px;
+    }
+    .date{font-size:12px;}
+    .media .img1{width:40px;height:40px;border-radius:20px;border:1px solid red;}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="edit">
+            <input type="checkbox" name="qx" id="qx">
+            <label class="allSelect">全选</label>
+            <button class="delete btn btn-warning">删除</button>
+            <span class="pull-right editBtn">编辑</span>
+        </div>
+        <div class="messageShow">
+            <div class="message">
+                <div class="date text-center">2016年11月17日&nbsp;星期四11：34</div>
+                <div class="currentMessage">
+                    <div class="media">
+                        <a class="media-left" href="#">
+                            <input type="checkbox" name="message">
+                            <img src="images/videorefer.jpg" class="img1">
+                        </a>
+                        <div class="media-body">
+                            <p>
+                              互联网普及化的今天，IT行业已经成为一个高薪行业，也是世界行业发展的趋势。社会快速发展，对人才的需求水涨船高。互联网大环境下衍生出的对职业技能的要求也是不断的up up up。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="message">
+                <div class="date text-center">2016年11月17日&nbsp;星期四11：34</div>
+                <div class="currentMessage">
+                    <div class="media">
+                        <a class="media-left" href="#">
+                            <input type="checkbox" name="message">
+                            <img src="images/videorefer.jpg" class="img1">
+                        </a>
+                        <div class="media-body">
+                            <p>
+                              互联网普及化的今天，IT行业已经成为一个高薪行业，也是世界行业发展的趋势。社会快速发展，对人才的需求水涨船高。互联网大环境下衍生出的对职业技能的要求也是不断的up up up。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('input:checkbox').each(function() {
+        $(this).hide();
+        $('.allSelect').hide();
+        $('.delete').hide();
+    });
+// 编辑
+    $('.editBtn').click(function(){
+      $('.allSelect').show();
+      $('.delete').show();
+      $('input:checkbox').show();
+    })
+// 全选
+  $('#qx,[name="qx"]').click(function(){
+  $('#qx,[name="message"]').prop('checked',($(this).prop('checked')));
+  })
+// 删除
+ $('.delete').click(function(){
+  if(confirm('确定要删除所选消息吗？')){
+  $("input:checkbox[name='message']:checked").parent().parent().parent().parent().remove();
+  }
+  })
+
+})
+</script>
+
+</html>

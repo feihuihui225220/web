@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人中心</title>
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+    .personHead {
+        margin: 10px auto;
+    }
+    
+    .headPic {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+      /*  background: url(images/videorefer.jpg) no-repeat center center;*/
+        background-size: 100% 100%;
+        border: 1px solid red;
+    }
+    .myVip {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .dynamic {
+        margin: auto 30px;
+        padding: 10px auto;
+    }
+    
+    .dynamic .row>a {
+        display: inline-block;
+        padding: 10px;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+    }
+    
+    .media {
+        position: relative;
+    }
+    
+    .media i {
+        position: absolute;
+        right: 0;
+        top: 50%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="person">
+        <div class="personHead container">
+            <span class="headPic"></span>
+            <span class="btn btn-default">一键登录</span>
+        </div>
+        <div class="myVip row">
+            <div class="col-xs-10"><i class="glyphicon glyphicon-glass"></i>您目前还是非会员，点击这里成为会员</div>
+            <div class="col-xs-1 "><i class="glyphicon glyphicon-chevron-right"></i></div>
+        </div>
+        <div class="dynamic">
+            <div class="row">
+                <a class="col-xs-4" href="coursePlan.html">课程计划</a>
+                <a class="col-xs-4" href="message.html">通知消息</a>
+                <a class="col-xs-4" href="feedback.html">意见反馈</a>
+            </div>
+            <div class="text-center">
+                <!-- <a href="#">每日动态</a>
+                <p class="text-right">
+                    <label class="glyphicon glyphicon-camera"></label>
+                    <a class="btn btn-info" for="xFile" href="record.html">新动态</a>
+                    <form>
+                        <input type="file" id="xFile" style="position:absolute;clip:rect(0 0 0 0);">
+                    </form>
+                </p> -->
+                <img src="images/suolue.jpg">
+                <p>您还没有登录哦！</p>
+            </div>
+        </div>
+        <!-- <ul class="list-group">
+            <li class="list-group-item">
+                <div class="media">
+                    <a class="media-left media-middle" href="offlineActivityDetail.html">
+                        <img src="images/suolue.jpg" style="width:100%;height:auto;">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">2016-10-11 星期一</h4>
+                        <p>主题事件</p>
+                    </div>
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="media">
+                    <a class="media-left media-middle" href="offlineActivityDetail.html">
+                        <img src="images/suolue.jpg" style="width:100%;height:auto;">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">2016-10-11 星期一</h4>
+                        <p>主题事件</p>
+                    </div>
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="media">
+                    <a class="media-left media-middle" href="offlineActivityDetail.html">
+                        <img src="images/suolue.jpg" style="width:100%;height:auto;">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">2016-10-11 星期一</h4>
+                        <p>主题事件</p>
+                    </div>
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                </div>
+            </li>
+        </ul> -->
+    </div>
+</body>
+<script>
+$(document).ready(function() {
+
+})
+</script>
+
+</html>

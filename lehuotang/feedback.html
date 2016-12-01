@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>反馈建议</title>
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+    .feedback{display:none;}
+    .feedback>span{color:blue;font-weight:bold;font-size:16px;}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <textarea class="form-control" rows="10">您好，欢迎您及时提出对我们服务的需求和想法，我们将及时处理和解决，更好地为您做好服务。</textarea>
+        <div class="row container">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="telephone" class="col-xs-3 control-label text-center">电话/QQ</label>
+                    <div class="col-xs-9">
+                        <input type="text" class="form-control" id="telephone" placeholder="便于我们和您联系">
+                    </div>
+                </div>
+            </form>
+            <span class="btn btn-default pull-right submit">提交</span>
+        </div>
+        <div class="feedback text-center">
+            <span>您的反馈建议已提交，感谢您对服务的支持！</span>
+        </div>
+    </div>
+    <div class="mask text-center">
+        
+    </div>
+</body>
+<script>
+$(document).ready(function(){
+    $('.submit').click(function(){
+        $('.mask').show();
+        $('.feedback').show();
+    })
+})
+</script>
+
+</html>

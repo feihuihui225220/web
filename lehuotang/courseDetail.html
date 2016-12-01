@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>肩周炎</title>
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link href="style/video-js.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/video.min.js"></script>
+    <style type="text/css">
+    /*浏览*/
+    .browseNum{margin:10px auto;}
+    .browseNum p {
+        margin-right: 10px;
+    }
+    .browseNum p i {
+        font-style: normal;
+        font-size: 14px;
+    }
+    .list-intro li {
+        color: #666;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 5px;
+    }
+    .list-intro li.active{color:green;}
+    
+    .list-intro li:first-child {
+        border-right: 1px solid #ccc;
+    }
+    
+    .videoList {
+        margin-top: 15px;
+    }
+    .media img{width:120px;height:80px;}
+    /*视频列表*/
+    .media{border:1px solid #ccc;padding:10px;}
+    .videoList ul li.active{background:url(images/play.png) no-repeat 80% center; }
+    /*相关介绍*/
+    </style>
+</head>
+
+<body>
+    <!-- 视频 -->
+    <div class="container allVideo">
+         <video id="example_video_1" class="video-js vjs-default-skin videoplay1" controls style="height:30%;width:100%;">
+            <source src="video/beike.mp4" type='video/mp4' />
+        </video>
+        <video id="example_video_2" class="video-js vjs-default-skin videoplay2" controls style="height:30%;width:100%; ">
+            <source src="video/beike1.mp4" type='video/mp4' />
+        </video> 
+        <video id="example_video_3" class="video-js vjs-default-skin videoplay3" controls style="height:30%;width:100%;">
+            <source src="video/beike.mp4" type='video/mp4' />
+        </video>   
+    </div>
+    <!-- 点赞 浏览人数 -->
+    <div class="container browseNum">
+        <p class="pull-right"><span class="glyphicon glyphicon-user"></span><i>35124</i></p>
+        <p class="pull-right"><span class="glyphicon glyphicon-thumbs-up"></span><i>36478</i></p>
+    </div>
+    <!-- tab页 -->
+    <div class="container listtab">
+        <ul class="row list-intro">
+            <li class="pull-left col-xs-6 text-center active">视频列表</li>
+            <li class="pull-right col-xs-6 text-center">相关介绍</li>
+        </ul>
+        
+        <div class="tabwrap">
+            <!-- 视频列表 -->
+            <div class="videoList">
+                <ul class="media-list">
+                    <li class="media active">
+                        <a class="media-left" href="#">
+                            <img src="images/videorefer.jpg">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">视频1</h4>
+                            <p>视频简介</p>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <a class="media-left" href="#">
+                            <img src="images/videorefer.jpg">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">视频1</h4>
+                            <p>视频简介</p>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <a class="media-left" href="#">
+                            <img src="images/videorefer.jpg">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">视频1</h4>
+                            <p>视频简介</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 视频介绍页 -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>1、动作步骤</h3>
+                    <p>人类的基本活动是指维持人类生存所必需的活动。基本活动包括走、跑、跳、投、攀登</p>
+                    <h3>2、注意事项</h3>
+                    <p>人类的基本活动是指维持人类生存所必需的活动。基本活动包括走、跑、跳、投、攀登</p>
+                    <h3>3、动作步骤</h3>
+                    <p>人类的基本活动是指维持人类生存所必需的活动。基本活动包括走、跑、跳、投、攀登</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+$(document).ready(function() {
+    // 视频列表、介绍选项卡
+    $('.listtab .panel').hide();
+    $('.list-intro li').click(function(){
+        var $div_li=$('.listtab ul li');
+        var index=$div_li.index(this);
+        $(".tabwrap>div").eq(index).show().siblings().hide();
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+    // 列表控制上方视频播放顺序
+    $('.allVideo video:gt(0)').hide();
+    $('.videoList ul li').click(function(){
+        //alert('a');
+        var $video_li=$('.videoList ul li');
+        var index=$video_li.index(this);
+        $(".allVideo>video").eq(index).show().siblings().hide();
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+})
+</script>
+
+</html>

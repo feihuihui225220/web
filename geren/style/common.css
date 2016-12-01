@@ -1,0 +1,61 @@
+*{margin:0;padding:0;}
+body{
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 16px;
+
+}
+.nav li{line-height:60px;}
+nav a{font-size:18px;}
+.navbar-default{border:none;}
+.logo{padding:0;}
+#headerNav li{height:100%;}
+#headerNav li a{height:100%;line-height:100%;position:relative;}
+#headerNav li a.active{color:#fe5186;}
+
+@media (min-width: 1200px) {	
+#headerNav li a:hover::after{content:""; display:block;height:5px;width:100%;background:#fe5186;position:absolute;top:40px;left:0px;}
+#headerNav li a:hover::before{content:"";display:block;width:0px;height:0px;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:5px solid #fe5186;position:absolute;top:35px;left:42%;}
+}
+@media (max-width: 768px) {
+	#headerNav li a:hover{background:#fe5186;color:#fff;}
+}
+
+
+.banner{
+	background:url(../images/banner.png) no-repeat center center;
+	background-size:cover;
+	height:26vw; 
+}
+.navbar{margin-bottom:0;}
+/*轮播*/
+#myCarousel{margin:50px 0 0 0;}
+.carousel-indicators {
+        bottom: -8px;
+    }
+/*首页 标题*/
+h2.title_tj{color:#444;font-weight:bold;font:18px "微软雅黑",Arial,Helvetica,sans-serif;background:url(../images/h_line.jpg) repeat-x 20px center;}
+h2.title_tj p{background:#fff;width:90px;}
+h2.title_tj span{color:#fe5187;}
+/*博客*/
+.bloglist h3{margin:20px 0 10px 0;color:#333;}
+a.a_title{font-size:16px;text-decoration:none;}
+
+/*footer*/
+.footer{line-height:40px;border-top:#e8e8e8 1px solid;margin-top:30px;}
+.footer p{font-size:12px;}
+
+/*博客简介*/
+.jumbotron {
+	background-image: url(../images/banner4.jpg);
+	margin: 50px 0 0 0;
+	color: #ccc;
+}
+
+		.main{margin-top:70px;min-height:600px;}
+		.labelme{font-size:12px;color:#999;}
+		.maincontent p{text-indent:2em;font-size:18px;color:#666;}
+		.mainright p{font-size:14px;color:#666;}
+		.mainright{margin-top:30px;}
+		@media (max-width: 768px) {
+			.maincontent{width:100%;}
+			.mainright{width:100%;}

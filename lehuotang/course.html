@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>课程预览</title>
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+    .row{margin-left:0;margin-right:0;}
+    .search {
+        position: relative;
+    }
+    .search .searchIcon {
+        position: absolute;
+        left: 25px;
+        top: 10px;
+    }
+    
+    .searchInput {
+        padding: 6px 30px;
+    }
+    .searchList{display:none;}
+    .p_item span, i{font-size:14px;color:#333;}
+    .p_item i{margin-right:5px;font-style:normal;}
+    </style>
+
+</head>
+
+<body>
+    <div class="container search">
+        <span class="glyphicon glyphicon-search searchIcon"></span>
+        <input type="text" name="" class="form-control searchInput" placeholder="搜索">
+    </div>
+    <div class="container searchList">
+        <ul class="list-group">
+            <li class="list-group-item">肩周炎</li>
+            <li class="list-group-item">手工压花</li>
+            <li class="list-group-item">关节炎</li>
+            <li class="list-group-item">腰椎疼痛</li>
+            <li class="list-group-item">睡眠困难</li>
+        </ul>
+    </div>
+    <div class="container course">
+        <div class="row">
+            <div class="col-xs-12 parentdiv thumbnail">
+                <a href="courseDetail.html">
+                    <img src="images/zhanshi.jpg">
+                </a>
+                <p class="p_item">
+                    <span class="pull-left">肩周炎</span>
+                    <span class="pull-right"><i class="usernum">30251</i>浏览</span> 
+                </p>
+            </div>
+            <div class="col-xs-12 parentdiv thumbnail">
+                <a href="courseDetail.html">
+                    <img src="images/zhanshi.jpg">
+                </a>
+                <p class="p_item">
+                    <span class="pull-left">肩周炎</span>
+                    <span class="pull-right"><i class="usernum">30251</i>浏览</span> 
+                </p>
+            </div>
+            <div class="col-xs-12 parentdiv thumbnail">
+                <a href="courseDetail.html">
+                    <img src="images/zhanshi.jpg">
+                </a>
+                <p class="p_item">
+                    <span class="pull-left">肩周炎</span>
+                    <span class="pull-right"><i class="usernum">30251</i>浏览</span> 
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $('.searchInput').click(function(){
+            $('.searchList').show();
+            $('.course').hide();
+        })
+    })
+</script>
+</html>
