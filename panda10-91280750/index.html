@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/totalscore.js"></script>
+    <script type="text/javascript" src="js/highcharts.js"></script>
+    <script type="text/javascript" src="js/music.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+    <audio id="audio1" hidden="true" loop="true">
+        <source src="video/The Family Song short.aac" type="audio/ogg">
+        <source src="video/The Family Song short.mp3" type="audio/mpeg">
+    </audio>
+    <div class="wrap">
+        <!-- 首页 -->
+        <div class="index">
+            <div class="panda_font"><img src="images/font.png" class="img1">
+            </div>
+            <div class="show_game index_btn"><a href="#" class="aa">玩法演示</a></div>
+            <div class="start_game index_btn"><a href="#" class="aa">开始游戏</a></div>
+            <div class="grade_game index_btn"><a href="#" class="aa">查看积分</a></div>
+            <div class="purpose_game index_btn"><a href="#" class="aa">游戏目的</a>
+                <a href="javascript:void(0);" class="autoplay"></a>
+            </div>
+        </div>
+        <!-- 规则 -->
+        <div class="gamerule">
+            <div class="rule">
+                <div class="rule_inner">
+                    <h1>规则</h1>
+                    <p class="p1">欢迎来到熊猫之家，你即将开启熊猫饲养员的体验之旅。</p>
+                    <p class="p2">首先你需要在竹林中选择想要饲养的熊猫，选好后该熊猫会原地旋转1圈。接着它会和其它熊猫一起玩耍、跑动， 你需要时刻留意自己熊猫的跑动位置。当跑动停止后，所有熊猫会以相同姿势坐立，你需要找出自己的熊猫，给它喂竹子。</p>
+                    <p class="p3">刚开始，你只能选择饲养一只熊猫，每完成一轮饲养任务，你可以多饲养一只熊猫。每轮有多个回合的挑战，一旦成功，即可获得红星作为积分奖励。快去体验一下吧！</p>
+                </div>
+            </div>
+            <div class="rule_btn"><a href="#">开始</a></div>
+        </div>
+        <!-- 开始游戏 -->
+        <div class="game">
+            <div id="gradestar"></div>
+            <div id="app">
+                <div id="round">第一轮&nbsp;1/8</div>
+                <a id="returnindex" href="#">返回首页</a>
+            </div>
+            <div id="continue"></div>
+        </div>
+        
+        <!-- 玩法演示 -->
+        <div class="gameshow">
+            <video controls="controls" id="video_mp4" autoplay="autoplay" >
+                <source src="video/gameshow.mp4" type="video/mp4">
+            </video>
+            <a href="#" class="return">返回首页</a>
+        </div>
+        <!-- 游戏目的 -->
+        <div class="purpose">
+            <div class="rule">
+                <div class="rule_inner">
+                    <h1>游戏目的</h1>
+                    <p class="p1">本游戏旨在锻炼你的注意力。</p>
+                    <p class="p2">生活中，你时常需要同时注意多个变化的对象。比如，在校门口接孙子孙女放学时，你需要在一群穿着同样校服的活蹦乱跳的小孩中找到自己的孙子孙女。</p>
+                    <p class="p3">本游戏用可爱的熊猫作为注意对象，在追踪熊猫的过程中，你的注意分配及注意集中的能力都将得到锻炼。</p>
+                </div>
+            </div>
+            <div class="rule_btn"><a href="#">返回首页</a></div>
+        </div>
+        <!-- 开始页 -->
+        <div class="start">
+            <h1><img src="images/raise.png" /></h1>
+            <div class="step">
+                <div class="step1 fl"><img src="images/run2.png" class="tu1">
+                    <br/><img class="pic1" src="images/1.png"></div>
+                <div class="step2 fl"><img src="images/run2.png" class="tu2">
+                    <br/><img class="pic2" src="images/2.png"></div>
+                <div class="step3 fl"><img src="images/run2.png" class="tu3">
+                    <br/><img class="pic3" src="images/3.png"></div>
+            </div>
+            <div class="remember">
+                <span id="restart">重新开始</span>
+                <span id="continueLast">继续游戏</span>
+            </div>
+        </div>
+        <!-- 结束页1 -->
+        <div class="finish1">
+            <div class="celebrate">
+                <img src="images/finish1.png" class="img1">
+            </div>
+            <div class="btn"><a href="#" class="a1">查看积分</a><a href="#" class="a2">开始下一轮</a></div>
+        </div>
+        <!-- 结束页2 -->
+        <div class="finish2">
+            <div class="celebrate">
+                <img src="images/finish2.png" class="img1">
+            </div>
+            <div class="btn"><a href="#" class="a1">查看积分</a><a href="#" class="a2">开始下一轮</a></div>
+        </div>
+        <!-- 结束页3 -->
+        <div class="finish3">
+            <div class="celebrate">
+                <img src="images/finish3.png" class="img1">
+            </div>
+            <div class="btn"><a href="#" class="a1">查看积分</a><a href="#" class="a2">返回首页</a></div>
+        </div>
+        <!-- 规则1 -->
+        <div class="rule1">
+            <div class="rule11 firstrule">
+                <a href="#" class="begin">开始</a>
+            </div>
+        </div>
+        <!-- 规则2 -->
+        <div class="rule2">
+            <div class="rule11 secondrule">
+                <a href="#" class="begin">开始</a>
+            </div>
+        </div>
+
+        <!-- 规则3 -->
+        <div class="rule3">
+            <div class="rule11 thirdrule">
+                <a href="#" class="begin">开始</a>
+            </div>
+        </div>
+         <!-- 积分 -->
+        <div class="totalscore">
+            <h2>今日积分:<span id="totalStar"></span>颗红星</h2>
+            <h2>今日排名:<span id="ranking"></span></h2>
+            <a href="#" class="return">返回首页</a>
+            <div id="container"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

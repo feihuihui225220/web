@@ -1,0 +1,28 @@
+.orderjudge_top{width:1200px;margin:0 auto;margin-top:30px;}
+.orderjudge_top span{display:inline-block;color:#3c3c3c;font-size:30px;width:160px;height:50px;line-height:50px;text-align:center;border-left:1px solid #d6d6d6;margin-left:20px;}
+.orderjudge_top .a_index{font-size: 16px;color:#505050;margin-left:1000px;}
+.orderjudge_mid{height:30px;background:url(../images/order_bg.jpg);}
+.orderjudge_bot{width:1200px;height:600px;margin:0 auto;}
+
+.style_1 {
+        color: #ffffff;
+        background-color: #e86a0a !important;
+        font-size: 18px;
+        width: 9%;
+        margin-top: 50px;
+        margin-left: 45%;
+        display: block;
+        line-height: 20px;
+        padding: 12px 0;
+        font-weight: normal;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 4px;
+        text-decoration: none;
+        border: 0 none;
+        float: left;
+    }
+.orderjudge_bot h5{font-size:16px;color:#717171;}
+.orderjudge_bot table{width:45%;margin-left:27%;}
+.orderjudge_bot table tr{height:40px;}
+.orderjudge_bot table tr td textarea{margin-left:20px;}

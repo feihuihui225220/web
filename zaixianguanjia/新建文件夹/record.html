@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>动态记录</title>
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <link rel="stylesheet" type="text/css" href="style/course.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/record.js"></script>
+    <style>
+    .max {
+        width: 100%;
+        height: auto;
+    }
+    
+    .min {
+        width: 100px;
+        height: auto;
+    }
+    
+    .col-xs-4 {
+        padding-left: 0;
+    }
+    
+    .thumbnail {
+        border: none;
+        position: relative;
+    }
+    
+    .clear{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .closePic {
+        position: absolute;
+        right: -5px;
+        top: -5px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url(images/close.png) no-repeat;
+        background-size: cover;
+        display: none;
+    }
+    
+    .newsName {
+        display: inline-block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .btn {
+        border: 1px solid #1f90e9;
+        color: #1f90e9;
+        background-color: #fff;
+    }
+    
+    #bigPic {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        display: none;
+    }
+    
+    #bigPic img {
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="smallPic">
+        <p class="clearfix container clear">
+            <span class="pull-left clearAll">清空照片</span>
+            <button class="pull-right deletePic btn">删除</button>
+        </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/dynamic.png" class="img-rounded">
+                        <div>
+                            <span class="newsName">月坛公园1</span>
+                            <span class="closePic"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/dynamic.png" class="img-rounded">
+                        <div>
+                            <span class="newsName">月坛公园2</span>
+                            <span class="closePic"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/dynamic.png" class="img-rounded">
+                        <div>
+                            <span class="newsName">月坛公园3</span>
+                            <span class="closePic"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bigPic"><img src="" alt="" /></div>
+</body>
+<script>
+
+</script>
+
+</html>

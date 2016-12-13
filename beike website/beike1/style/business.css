@@ -1,0 +1,57 @@
+
+/*.bannerbox_c{width:100%;position:relative;overflow:hidden;height:580px;}
+.banner_c{width:1920px;position:absolute;left:50%;margin-left:-960px;}*/
+/*参会培训*/
+.show-art-creative-chpyx{background-size:cover;}
+.show-art-creative-chpyx{height:23.75vw;background-image:url(../images/peixun.png);position:relative;top:120px;}
+/*国际论坛*/
+.show-art-creative-gjlt{background-size:cover;}
+.show-art-creative-gjlt{height:23.75vw;background-image:url(../images/luntan.png);position:relative;top:120px;}
+/*国际论坛新闻*/
+.show-art-creative-gjltxw{background-size:cover;}
+.show-art-creative-gjltxw{height:30.21vw;background-image:url(../images/national.png);position:relative;top:120px;}
+/*乐活堂*/
+.show-art-creative-lht{background-size:cover;}
+.show-art-creative-lht{height:30.21vw;background-image:url(../images/banner1.png);position:relative;top:120px;}
+
+/*企业责任*/
+.show-art-creative-qyzr{background-size:cover;}
+.show-art-creative-qyzr{height:30.21vw;background-image:url(../images/zhihui.png);position:relative;top:120px;}
+/*养老平台*/
+.show-art-creative-ylpt{background-size:cover;}
+.show-art-creative-ylpt{height:23.75vw;background-image:url(../images/zhihui.png);position:relative;top:120px;}
+
+.bus_main{width:1100px;margin:120px auto 0 auto;}
+.bus_main h3{font-size:30px;color:#565f64;width:180px;height:50px;border-bottom:2px solid #ef9c19;margin-top:50px;margin-bottom:28px;text-align:center;}
+.bus_main p{font-size:18px;color:#6c6e6f;text-indent:2em;line-height:30px;letter-spacing:2px;}
+.bus_main .qrcode{text-align:center;margin-top:20px;}
+.bus_main .qrcode .qrcode_text{display:block;margin-top:10px;}
+.bus_main .website_lht{display:block;color:#ef9c19;font-size:25px;float:right;}
+/*新闻动态*/
+.bus_mainnews{width:1100px;margin:0 auto;}
+.bus_mainnews h3{font-size:36px;color:#565f64;width:180px;height:60px;border-bottom:2px solid #ef9c19;margin-top:35px;margin-bottom:28px;text-align:center;}
+.bus_mainnews p{font-size:18px;color:#6c6e6f;text-indent:2em;line-height:30px;letter-spacing:2px;}
+
+@media print,
+screen and (max-width: 500px) {
+	/*参会培训*/
+	.show-art-creative-chpyx{top:60px;}
+	.bus_main{width:100%;margin:60px auto 0 auto;}
+	.bus_main h3{margin-bottom:0;font-size:25px;}
+	.bus_main p{width:90%;padding:0;letter-spacing:0;margin:0 5%;}
+	/*新闻动态*/
+	.bus_mainnews{width:100%;}
+	.bus_mainnews h3{width:45%;margin-bottom:0;}
+	.bus_mainnews p{width:90%;padding:0;letter-spacing:0;margin:0 5%;}
+	/*国际论坛*/
+	.show-art-creative-gjlt{top:60px;}
+	/*国际论坛新闻*/
+.show-art-creative-gjltxw {top: 60px;}
+.bus_main .gjltxwh3{margin-top:0;}
+/*乐活堂*/
+.show-art-creative-lht{top: 60px;}
+/*企业责任*/
+.show-art-creative-qyzr{top: 60px;}
+/*养老平台*/
+.show-art-creative-ylpt{top: 60px;}
+}

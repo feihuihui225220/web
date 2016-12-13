@@ -1,0 +1,11 @@
+	.fl{float:left;}
+	.fr{float:right;}
+	.main{width:1200px;margin:0 auto;height:600px;}
+	.succ{height:66px;line-height:66px; color:#7dbe57;font-size:20px;text-indent:40px;background:url(../images/succ_icon.png)left center no-repeat;}
+	.add_shopping{height:100px;}
+	.add_left{width:50%;}
+	.add_left .pic{margin-top:16px;}
+	.add_right{width:50%;position:relative;}
+	.add_right a{font-size:16px;}
+	.add_right .return{position:absolute;top:60px;left:300px;color:#e86a0a;}
+	.add_right .jiesuan{position:absolute;top:50px;left:370px;background-color:#e86a0a;display:inline-block;width:150px;height:38px;line-height:38px;text-align:center;color:#fff;}

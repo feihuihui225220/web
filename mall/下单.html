@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>提交订单页</title>
+    <link href="style/index.css" rel="stylesheet" type="text/css">
+    <link href="style/shoppingcart.css" rel="stylesheet" type="text/css">
+    <link href="style/order.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/order.js"></script>
+</head>
+
+<body>
+    <div class="order_main">
+        <div class="order_top">
+            <div class="order_topl fl">
+                <a href="index.html">
+                    <img src="images/logo.png"></a>
+            </div>
+            <div class="order_topm fl">提交订单</div>
+            <div class="order_topr">
+                <div class="flow_steps fr">
+                    <ul>
+                        <li class="current_prev">购物车</li>
+                        <li class="current">提交订单</li>
+                        <li class="">支付</li>
+                        <li class="last">完成支付</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="order_middle"></div>
+    <div class="order_main">
+        <h3>填写并核对订单信息</h3>
+        <div class="order_main_m">
+            <h3>收货地址</h3>
+            <div class="order_address">
+                <span class="order_address_name">费辉辉</span>
+                <span class="order_address_address">新街口街道西直门南大街16号西楼805-3</span>
+                <span class="order_address_num">18701521566</span>
+                <span class="order_modify">
+					<a class="order-a1" onclick="ShowDiv('MyDiv','fade')" >修改</a>
+					|
+					<a class="order-a2">删除</a>
+				</span>
+                <div id="fade" class="black_overlay"></div>
+                <div id="MyDiv" class="white_content">
+                    <div class="add_head">
+                        <p class="fl">添加收货地址</p>
+                        <span class="fr" onclick="CloseDiv('MyDiv','fade')">关闭</span>
+                    </div>
+                    <div class="clr"></div>
+                    <div class="content">
+                        <div class="item">
+                            <div>
+                                <span class="addfont"> <em>*</em>
+									收货人:
+								</span>
+                            </div>
+                            <input type="text" class="input1">
+                        </div>
+                        <div class="item">
+                            <div>
+                                <span class="addfont"> <em>*</em>
+									详细地址:
+								</span>
+                            </div>
+                            <input type="text" class="input2">
+                        </div>
+                        <div class="item">
+                            <div>
+                                <span class="addfont">
+									<em>*</em>
+									手机号码(或固定电话):
+								</span>
+                            </div>
+                            <input type="text" class="input3">
+                        </div>
+                        <a href="#">保存收货地址</a>
+                    </div>
+                </div>
+            </div>
+            <div class="order_address">
+                <span class="order_address_name">费辉辉</span>
+                <span class="order_address_address">新街口街道西直门南大街16号西楼805-3</span>
+                <span class="order_address_num">18701521566</span>
+                <span class="order_modify">
+					<a class="order-a1" onclick="ShowDiv('MyDiv','fade')" >修改</a>
+					|
+					<a class="order-a2">删除</a>
+				</span>
+            </div>
+            <h3>支付方式</h3>
+            <div>
+                <div class="order_payment fl">
+                    <span class="order_payment1">货到付款</span>
+                </div>
+                <div class="order_payment fl">
+                    <span class="order_payment1">微信付款</span>
+                </div>
+            </div>
+            <h3 style="clear:both">确认订单信息</h3>
+            <div class="order_shoppinghead">
+                <span class="order_shoppinghead_sp">商品</span>
+                <span class="order_shoppinghead_dj">单价（元）</span>
+                <span class="order_shoppinghead_sl">数量</span>
+                <span class="order_shoppinghead_xj">小计（元）</span>
+                <span class="order_shoppinghead_ps">配送方式</span>
+            </div>
+            <div class="order_shoppingdetail">
+                <div class="order_shoppingmain">
+                    <div class="order_shoppingmain1 fl">
+                        <div class="order_shoppingmain1_left fl">
+                            <img src="images/order_cp.jpg"></div>
+                        <div class="order_shoppingmainl_right fl">
+                            <p>运动健身三件套给力促销</p>
+                            <p>颜色：黄&nbsp;&nbsp;&nbsp;规格：XXL</p>
+                        </div>
+                    </div>
+                    <div class="order_shoppingmain2 fl">
+                        <span>￥25.06</span>
+                    </div>
+                    <div class="order_shoppingmain3 fl">1</div>
+                    <div class="order_shoppingmain4 fl">￥25.06</div>
+                    <div class="order_shoppingmain5 fl">普通快递</div>
+                </div>
+            </div>
+            <div class="order_paymentnum">
+                实付款
+                <span>25.06</span>
+            </div>
+            <div class="return_order">
+                <a href="购物车.html">返回购物车</a>
+                <span>
+					<a href="#" class="suborder">提交订单</a>
+				</span>
+            </div>
+        </div>
+        <div class="w" style="clear:both">
+            <div id="footer">
+                <div class="links">
+                    <a href="#">北科官网</a> |
+                    <a href="#">服务社区</a> |
+                    <a href="#">合作伙伴</a> |
+                    <a href="#">联系我们</a> |
+                    <a href="#">关于我们</a>
+                </div>
+                <div class="company">
+                    <p>北京科力新技术发展总公司</p>
+                    <p>北京市西城区西直门南大街16号西楼8楼</p>
+                </div>
+                <div class="copyright">
+                    Copyright © 2016 Btime.com, All Rights Reserved 网上传播视听节目许可证0103028号
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

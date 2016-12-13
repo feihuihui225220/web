@@ -1,0 +1,11 @@
+.main_right{position:relative;}
+.order_content{position:absolute;left:300px;top:143px;width:660px;height:290px;}
+.order_content p{line-height:80px;}
+.order_content p span{font-size:21px;}
+.order_content .span1,.span2,.span4{display:inline-block;width:160px;}
+.order_content .span2{margin-left:18px;}
+.order_content .span3{display:inline-block;width:125px;}
+.order_content .span1{text-align:right;}
+.main_right  .newOrder,.newClient{display:inline-block;position:absolute;color:#fff;background-color:#327e33;width:120px;height:30px;line-height: 30px;border-radius:5px;text-align:center;}
+.main_right  .newOrder{left:430px;top:455px;}
+.main_right  .newClient{left:690px;top:455px;}

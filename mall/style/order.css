@@ -1,0 +1,88 @@
+
+
+.fl{float:left;}
+.order_main{width:1200px;margin:0 auto;}
+.order_top{width:100%;margin-top:30px;height: 90px;}
+.order_topm{width:160px;height:50px;line-height:50px;font-size:30px;color:#505050;border-left:1px solid #d6d6d6;text-align: center;margin-left:20px;}
+.order_topr{padding-top:50px;}
+.order_middle{height:30px;background:url(../images/order_bg.jpg);}
+
+.order_main h3{font-size:18px;color:#3c3c3c;margin-top:20px;margin-left:26px;}
+.order_main_m{margin:30px 40px;border:1px solid #cdcdcd;}
+.order_main_m h3{ont-size:18px;color:#3c3c3c;margin-left:35px;margin-top:12px;height:60px;line-height:60px;}
+.order_address{width:1030px;height:40px;line-height: 40px;margin-left:40px;margin-right:40px;margin-bottom:10px;border:1px solid #dddddd;}
+.order_address span{color:#757575;font-size:13px;display: inline-block;}
+.order_address_name{width:120px;margin-left:30px;}
+.order_address_address{width:540px;}
+.order_address_num{width:154px;}
+.order_modify{width:80px;margin-left:70px;}
+.order_modify a{color:blue;}
+
+.order_payment{width:133px;height:40px;line-height: 40px;margin-left:40px;border:1px solid #dddddd;}
+.order_payment1{color:#757575;font-size:13px;display: inline-block;width:110px;height:40px;text-align: center;}
+.order_shoppinghead{height:35px;line-height:35px;}
+.order_shoppinghead span{font-size:14px;color:#757575;display: inline-block;}
+.order_shoppinghead_sp{width:370px;margin-left:70px;}
+.order_shoppinghead_dj{width:123px;}
+.order_shoppinghead_sl{width:134px;}
+.order_shoppinghead_xj{width:165px;}
+.order_shoppinghead_ps{width:175px;}
+
+.order_shoppingdetail{width:1030px;height:87px;margin-left:40px;margin-right:40px;margin-bottom:20px;border:1px solid #dddddd;}
+.order_shoppingdetail span{font-size:14px; color:#404040;}
+.order_shoppingmain{margin:16px 0px 8px 17px;}
+.order_shoppingmain span{font-size:14px; color:#404040;}
+.order_shoppingmain1{width:281px;height:63px;}
+.order_shoppingmain1_left{width:61px;}
+.order_shoppingmainl_right{width:220px; }
+.order_shoppingmainl_right p{height:30px;line-height: 30px;font-size:14px;color:#404040;}
+.order_paymentnum{height:100px;line-height:100px;font-size:14px; color:#404040;text-align: right;padding-right:15px;}
+.order_paymentnum span{color:#dd6714;font-size:30px;font-weight:bold;margin-right:40px;}
+.order_shoppingmain2,.order_shoppingmain3,.order_shoppingmain4,.order_shoppingmain5{height:63px;line-height:63px;font-size:14px;}
+.order_shoppingmain2{width:60px;margin-left:108px;}
+.order_shoppingmain3 {width:164px;text-align: center;color:#404040;}
+.order_shoppingmain4{width:140px;text-align: center;color:#dd6714;}
+.order_shoppingmain5{width:100px;color:#404040;text-align:center;margin-left:50px;}
+.return_order{height:80px; text-align:right;}
+.return_order a{font-size:18px;color:#dd6714;margin-right:30px;}
+.return_order span .suborder{display:inline-block;width:160px;height:48px;line-height:48px;text-align:center;color:#fff;font-size:20px;background-color: #dd6714;margin-right:40px;}
+/*编辑-删除地址*/
+.black_overlay{
+display: none;
+position: absolute;
+top: 0%;
+left: 0%;
+width: 100%;
+height: 100%;
+background-color: #d1d1d1;
+z-index:10001;
+-moz-opacity: 0.8;
+opacity:.80;
+filter: alpha(opacity=80);
+}
+.white_content {
+display: none;
+position: absolute;
+top: 25%;
+left: 25%;
+width: 50%;
+height: 60%;
+border: 4px solid #bdbdbd;
+background-color: white;
+z-index:10002;
+overflow: auto;
+}
+
+.addfont{font-size:14px;color:#aaa;}
+.add_head{height:30px;line-height:30px;border-bottom:1px solid #ccc;}
+.white_content .content{padding:30px 20px;}
+.add_head p{font-size:14px;font-weight:bold;text-indent:4px;width:500px;}
+.add_head span{margin-right:10px;}
+.white_content .item{height:80px;}
+.white_content .item input{width:235px;height:30px;border:1px solid #ccc;margin-top:10px;}
+.white_content .item span em{color:red;}
+.white_content .content a{display:inline-block;width:120px;height:30px;line-height:30px;text-align:center;font-size:14px;margin-top:20px;border:1px solid #ccc;}
+.white_content .content .item .fred{color:red; margin-left:10px;}
+.white_content .content .item .a_sh1,.a_sh2,.a_sh3{display:none;}
+
+.selected{border:1px solid #e86a0a;background:url(../images/selected.png) no-repeat right bottom;}

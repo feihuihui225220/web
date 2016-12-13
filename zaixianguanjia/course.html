@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>课程悦览</title>
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <link rel="stylesheet" type="text/css" href="style/course.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container search">
+        <span class="glyphicon glyphicon-search searchIcon"></span>
+        <input type="text" name="" class="form-control searchInput" placeholder="搜索">
+    </div>
+    <div class="container searchList">
+        <ul class="list-group">
+            <li class="list-group-item">肩周炎</li>
+            <li class="list-group-item">手工压花</li>
+            <li class="list-group-item">关节炎</li>
+            <li class="list-group-item">腰椎疼痛</li>
+            <li class="list-group-item">睡眠困难</li>
+        </ul>
+    </div>
+    <div class="container course">
+        <div class="row">
+            <div class="col-xs-12 parentdiv thumbnail">
+                <a href="courseDetail.html">
+                    <img src="images/courseshow.png">
+                </a>
+                <p class="p_item clearfix">
+                    <span class="pull-left fontcolor4d">肩周炎</span>
+                    <span class="pull-right"><span class="glyphicon glyphicon-play-circle playIcon"></span><i>25823</i></span>
+                </p>
+            </div>
+            <div class="col-xs-12 parentdiv thumbnail">
+                <a href="courseDetail.html">
+                    <img src="images/courseshow.png">
+                </a>
+                <p class="p_item clearfix">
+                    <span class="pull-left fontcolor4d">园艺手工</span>
+                    <span class="pull-right"><span class="glyphicon glyphicon-play-circle playIcon"></span><i>25823</i></span>
+                </p>
+            </div>
+            <div class="col-xs-12 parentdiv thumbnail">
+                <a href="courseDetail.html">
+                    <img src="images/courseshow.png">
+                </a>
+                <p class="p_item clearfix">
+                    <span class="pull-left fontcolor4d">上肢训练</span>
+                    <span class="pull-right"><span class="glyphicon glyphicon-play-circle playIcon"></span><i>25823</i></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $('.searchInput').click(function(){
+        $('.searchList').toggle();
+        })
+    })
+</script>
+</html>

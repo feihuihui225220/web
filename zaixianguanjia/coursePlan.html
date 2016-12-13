@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>课程表预览</title>
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel='stylesheet' href='style/fullcalendar.css' />
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <link rel="stylesheet" type="text/css" href="style/clndr.css">
+    <link rel="stylesheet" type="text/css" href="style/coursePlan.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src='js/moment.min.js'></script>
+    <script src='js/fullcalendar.js'></script>
+    <script src='js/zh-cn.js'></script>
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="images/lunbo1.jpg" class="activityPic">
+    </div>
+    <div class="courseName">
+        <p class="container course">
+            <span>课程名称</span>
+            <span class="activeDay">活动日</span>
+            <a class="btn btn-default btn-sm pull-right btnColor" href="#">+&nbsp;订阅</a>
+        </p>
+    </div>
+    <!-- 两周日历 -->
+    <div class="container bgColor calendar">
+        <div class="cal1"></div>
+        <div class="cal2">
+            <script type="text/template" id="template-calendar">
+                <!-- <div class="clndr-controls">
+                    <div class="clndr-previous-button">&lsaquo;</div>
+                    <div class="month"><%= intervalStart.format('M/DD') + ' &mdash; ' + intervalEnd.format('M/DD') %></div>
+                    <div class="clndr-next-button">&rsaquo;</div>
+                </div> -->
+                <div class="clndr-grid">
+                    <div class="days-of-the-week">
+                    <% _.each(daysOfTheWeek, function(day) { %>
+                        <div class="header-day"><%= day %></div>
+                    <% }); %>
+                        <div class="days">
+                        <% _.each(days, function(day) { %>
+                            <div class="<%= day.classes %>"><%= day.day %></div>
+                        <% }); %>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="clndr-today-button">Today</div> -->
+            </script>
+        </div>
+        <div class="cal3">
+            <script type="text/template" id="template-calendar-months">
+                <div class="clndr-controls top">
+                    <div class="clndr-previous-button">&lsaquo;</div>
+                    <div class="clndr-next-button">&rsaquo;</div>
+                </div>
+                <div class="clearfix">
+                <% _.each(months, function(cal) { %>
+                    <div class="cal">
+                        <div class="clndr-controls">
+                            <div class="month"><%= cal.month.format('MMMM') %></div>
+                        </div>
+                        <div class="clndr-grid">
+                            <div class="days-of-the-week">
+                            <% _.each(daysOfTheWeek, function(day) { %>
+                                <div class="header-day"><%= day %></div>
+                            <% }); %>
+                                <div class="days">
+                                <% _.each(cal.days, function(day) { %>
+                                    <div class="<%= day.classes %>"><%= day.day %></div>
+                                <% }); %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+                </div>
+                <div class="clndr-today-button">Today</div>
+            </script>
+        </div>
+    </div>
+    <div class="eventShow">
+        <div class="dateWeek container">
+            <span id="date">11月14日<span class="font14">星期一</span></span>
+        </div>
+        <!-- <div>
+            <p>
+                <span>体适能上肢训练</span>
+                <span class="pull-right">12分钟</span>
+            </p>
+            <p>
+                <span>手工园艺</span>
+                <span class="pull-right">20分钟</span>
+            </p>
+        </div> -->
+        <div class="">
+            <ul class="list-group">
+              <li class="list-group-item">
+                  <span>体适能上肢训练</span>
+                  <span class="minutes pull-right">12分钟</span>
+              </li>
+              <li class="list-group-item">
+                  <span>下肢柔韧度训练</span>
+                  <span class="minutes pull-right">12分钟</span>
+              </li>
+              <li class="list-group-item">
+                  <span>手工园艺</span>
+                  <span class="minutes pull-right">12分钟</span>
+              </li>
+              
+            </ul>
+        </div>
+    </div>
+    <div class="mask"></div>
+<!--     <div class="note">
+        <h3>提示</h3>
+        <div>您真的要取消订阅吗？</div>
+        <div class="container">
+            <button class="pull-left wrong">不小心按错了</button>
+            <button class="pull-right abandon">忍痛放弃订阅</button>
+        </div>
+    </div>
+    <div class="cancelSuccess"></div> -->
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/underscore.js"></script>
+<script src="js/clndr.js" src="js/moment.min.js"></script>
+<script src="js/demo.js"></script>
+<script>
+$(document).ready(function() {
+// 取消订阅
+    $('.unsubscribe').click(function(){
+        showMask();
+        $('.note').show();
+    })
+    $('.wrong').click(function(){
+        hideMask();
+        $('.note').hide();
+    })
+    $('.abandon').click(function(){
+        $('.note').hide();
+        $('.cancelSuccess').show();
+        $('.cancelSuccess').css({'background':'url(images/cancelSuccess.png) no-repeat center center'});
+        
+    })
+      function showMask(){     
+        $(".mask").css("height",$(document).height());     
+        $(".mask").css("width",$(document).width());     
+        $(".mask").show();     
+    }  
+    //隐藏遮罩层  
+    function hideMask(){     
+        $(".mask").hide();     
+    }  
+
+})
+</script>
+
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>用户信息-编辑</title>
+    <link href="style/common.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="style/common1.css">
+    <link rel="stylesheet" type="text/css" href="style/filing.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+<div class="header clearfix">
+  <div class="logo fl">羊坊店街道医养结合服务平台</div>
+  <div class="set fr"><a href="#" class="wel">欢迎您</a><span class="line"></span><a href="#" class="setpassword">修改密码</a><span class="line"></span><a href="#">退出</a></div>
+</div>
+<div class="main">
+  <div class="personTitle clearfix">
+    <div class="personTitle_left fl">
+      <img src="images/userphoto.png" class="fl">
+      <ul class="fl">
+        <li><label class="marginright10">姓名:</label><label>李小兰</label><label class="marginleft90">性别:</label><label>女</label><label class="marginleft90">年龄:</label><label>87</label></li>
+        <li><label class="marginright10">住址:</label><label>北京市西城区西直门南大街16号西楼</label</li>
+        <li><label class="marginright10">电话:</label><label>15879544565</label><label style="margin-left:34px;">病史:</label><label>糖尿病</label><label style="margin-left:58px;">过敏史:</label><label>无</label></li>
+      </ul>
+    </div>
+    <div class="personTitle_right fr">
+      <ul class="clearfix fr">
+        <li>
+          <a href="#" class="huizhen">
+            <img src="images/huizhen.png">
+            <span style="color:#fec07d;">申请会诊</span>
+          </a>
+        </li>
+        <li class="zhuanzhen">
+          <a href="#">
+            <img src="images/zhuanzhen.png">
+            <span style="color:#ff5024;">申请转诊</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="zhiliao">
+            <img src="images/zhiliao.png">
+            <span style="color:#8fc374;">申请治疗</span>
+          </a>
+        </li>
+        <li class="shouye">
+          <a href="#">
+            <img src="images/return.png">
+            <span style="color:#f7c456;">返回首页</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="personInfo clearfix">
+    <div class="personInfo_left fl">
+      <ul class="sidebar">
+        <li>
+          <a href="#" class="select">用户信息</a>
+        </li>
+        <li>
+          <a href="#">巡诊记录</a>
+        </li>
+        <li>
+          <a href="#">生化指标</a>
+        </li>
+        <li>
+          <a href="#">健康数据</a>
+        </li>
+        <li>
+          <a href="#">巡诊计划</a>
+        </li>
+        <li>
+          <a href="#">会诊记录</a>
+        </li>
+        <li>
+          <a href="#">转诊记录</a>
+        </li>
+        <li>
+          <a href="#">治疗记录</a>
+        </li>
+      </ul>
+    </div>
+    <div class="personInfo_right fl">
+      <div class="personInfo_righttop">
+        <label>建档医生:</label>
+        <label class="marginleft15">魏海东</label>
+        <label class="marginleft75">建档护士:</label>
+        <label class="marginleft15">解英</label>
+        <label class="marginleft75">建档日期:</label>
+        <label class="marginleft15">2010年6月1日</label>
+        <a href="#" class="fr save"></a>
+      </div>
+      <div class="personInfo_rightbottom">
+        <ul class="detail">
+          <li>
+            <label>姓名:</label><input type="text" name=""  class="input1" >
+            <label>体重:</label><input type="text" name="" class="input1">
+            <label>工作单位:</label><input type="text" name="" class="input2">
+            <label>身份证号:</label><input type="text" name="" class="input2">
+          </li>
+          <li>
+            <label>性别:</label><input type="text" name="" class="input1">
+            <label>身高:</label><input type="text" name="" class="input1">
+            <label>家庭电话:</label><input type="text" name="" class="input2">
+            <label>社区（居委会）:</label><input type="text" name="" class="input2">
+          </li>
+          <li>
+            <label>年龄:</label><input type="text" name="" class="input1">
+            <label>民族:</label><input type="text" name="" class="input1">
+            <label>家庭住址:</label><input type="text" name="" class="input2" style="width:330px;">
+          </li>
+        </ul>
+        <div class="emergency clearfix">
+          <label class="contact fl">紧急联系人:</label>
+           <p class="fl">
+            <label>姓名:</label>
+            <input type="text" class="input1" name="">
+            <label>电话:</label>
+            <input type="text" class="input2" name="">
+           </p> 
+           <p class="fl">
+            <label>姓名:</label>
+            <input type="text" class="input1" name="">
+            <label>电话:</label>
+            <input type="text" class="input2" name="">
+          </p>
+          <a href="#" class="increase"></a>
+        </div>
+        <div class="medical">
+          <label class="leftInfo">医疗费用类型:</label>
+          <input type="radio" name="fee" id="baoxian" checked="checked">
+          <label for="baoxian" class="marginright50">医保</label>
+          <input type="radio" name="fee" id="gongliao">
+          <label for="gongliao" class="marginright50">公疗</label>
+          <input type="radio" name="fee" id="laoxiao">
+          <label for="laoxiao" class="marginright50">一老一小</label>
+          <input type="radio" name="fee" id="jiashu">
+          <label for="jiashu" class="marginright50">家属</label>
+          <input type="radio" name="fee" id="zifei">
+          <label for="zifei">自费</label>
+        </div>
+        <div class="fixedmed">
+          <label class="leftInfo">定点医疗单位:</label>
+          <input type="text" name="" class="input3">
+        </div>
+        <div class="marriage border-bottom">
+          <label class="leftInfo fl">婚姻状况:</label>
+            <input type="radio" name="marr" id="yihun" checked="checked">
+            <label for="yihun" class="marginright50">已婚</label>
+            <input type="radio" name="marr" id="weihun">
+            <label for="weihun" class="marginright50">未婚</label>
+            <input type="radio" name="marr" id="sangou">
+            <label for="sangou" class="marginright50">丧偶</label>
+            <input type="radio" name="marr" id="lihun" style="margin-left:40px;">
+            <label for="lihun" class="marginright50">离婚</label>
+            <input type="radio" name="marr" id="qita">
+            <label for="qita">其他</label>
+        </div>
+        <div class="family border-bottom">
+          <label class="leftInfo">家族情况:</label>
+          <label>父母:</label>
+          <input type="text" name="" class="input4">
+          <label>人</label>
+          <label style="margin-left:58px;">子:</label>
+          <input type="text" name="" class="input4">
+          <label>人</label>
+          <label style="margin-left:58px;">女:</label>
+          <input type="text" name="" class="input4">
+          <label>人</label>
+        </div>
+        <div class="degree border-bottom">
+          <label class="leftInfo">文化程度:</label>
+          <input type="radio" name="degree" id="illiteracy" checked="checked">
+          <label for="illiteracy" class="marginright50">文盲</label>
+          <input type="radio" name="degree" id="primary">
+          <label for="primary" class="marginright50">小学</label>
+          <input type="radio" name="degree" id="middle">
+          <label for="middle" class="marginright50">中学</label>
+          <input type="radio" name="degree" id="senior">
+          <label for="senior" class="marginright50">高中/大专</label>
+          <input type="radio" name="degree" id="college">
+          <label for="college" class="marginright50">大学本科</label>
+          <input type="radio" name="degree" id="degree_other" checked="checked">
+          <label for="degree_other">其他</label>
+        </div>
+        <div class="profession border-bottom">
+          <label class="job">职业:</label>
+          <input type="radio" name="profession" id="worker">
+          <label for="worker" class="marginright50">工人</label>
+          <input type="radio" name="profession" id="leader">
+          <label for="leader" class="marginright50">干部</label>
+          <input type="radio" name="profession" id="teacher">
+          <label for="teacher" class="marginright50">教师</label>
+          <input type="radio" name="profession" id="doctor">
+          <label for="doctor" class="marginright50">医务</label>
+          <input type="radio" name="profession" id="housework">
+          <label for="housework" class="marginright50">家务</label>
+          <input type="radio" name="profession" id="soldier">
+          <label for="soldier" class="marginright50">军人</label>
+          <input type="radio" name="profession" id="self">
+          <label for="self" class="marginright50">个体</label>
+          <input type="radio" name="profession" id="toretire">
+          <label for="toretire" class="marginright50">离休</label>
+          <input type="radio" name="profession" id="retire">
+          <label for="retire" class="marginright50">退休</label>
+          <input type="radio" name="profession" id="unemployed">
+          <label for="unemployed" class="marginright50">无业</label>
+          <input type="radio" name="profession" id="other" checked="checked">
+          <label for="other">其他</label>
+        </div>
+        <div class="smoke border-bottom">
+          <label class="leftInfo">吸烟史:</label>
+          <input type="text" name="" class="input4">
+          <label>年</label>
+          <label class="marginleft50">吸烟量:</label>
+          <input type="text" name="" class="input4">
+          <label>支/天</label>
+          <label class="marginleft50">已戒烟:</label>
+          <input type="text" name="" class="input4">
+          <label>年</label>
+        </div>
+        <div class="drink border-bottom">
+          <label class="leftInfo">饮酒史</label>
+          <input type="text" name="" class="input4">
+          <label>年</label>
+          <label class="marginleft50">饮酒量:</label>
+          <input type="text" name="" class="input4">
+          <label>两/天</label>
+          <label class="marginleft50">已戒酒:</label>
+          <input type="text" name="" class="input4">
+          <label>年</label>
+        </div>
+        <div class="dietary border-bottom">
+          <label class="habit">饮食习惯:</label>
+          <input type="radio" name="dietary" id="salty">
+          <label for="salty" class="marginright60">咸</label>
+          <input type="radio" name="dietary" id="sweet">
+          <label for="sweet" class="marginright60">甜</label>
+          <input type="radio" name="dietary" id="spicy">
+          <label for="spicy" class="marginright60">辣</label>
+          <input type="radio" name="dietary" id="sour">
+          <label for="sour" class="marginright60">酸</label>
+          <input type="radio" name="dietary" id="fried">
+          <label for="fried" class="marginright60">油炸</label>
+          <input type="radio" name="dietary" id="hot">
+          <label for="hot" class="marginright60">热食</label>
+          <input type="radio" name="dietary" id="cold">
+          <label for="cold" class="marginright60">冷食</label>
+          <input type="radio" name="dietary" id="vege">
+          <label for="vege" class="marginright60">素食</label>
+          <input type="radio" name="dietary" id="meat">
+          <label for="meat" class="marginright60">荤食</label>
+          <input type="radio" name="dietary" id="qita1">
+          <label for="qita1" >其他</label>
+        </div>
+        <div class="irritability border-bottom">
+          <label class="leftInfo">药物过敏:</label>
+          <input type="radio" name="yaowu" id="qinmeisu" checked="checked">
+          <label for="qinmeisu" class="marginright50">青霉素</label>
+          <input type="radio" name="yaowu" id="lianmeisu">
+          <label for="lianmeisu" class="marginright50">链霉素</label>
+          <input type="radio" name="yaowu" id="huangan">
+          <label for="huangan" class="marginright50">磺胺</label>
+          <input type="radio" name="yaowu" id="toubao">
+          <label for="toubao" class="marginright50">头孢</label>
+          <input type="radio" name="yaowu" id="qita_med">
+          <label for="qita_med" class="marginright50">其他</label>
+          <input type="radio" name="yaowu" id="no">
+          <label for="no">无</label>
+        </div>
+        <div class="hard border-bottom">
+          <label class="leftInfo">当前特殊困难:</label>
+          <input type="radio" name="hard" id="bashi" checked="checked">
+          <label for="bashi" class="marginright50">&gt;80岁</label>
+          <input type="radio" name="hard" id="xingdong">
+          <label for="xingdong" class="marginright50">行动不便</label>
+          <input type="radio" name="hard" id="wochuang">
+          <label for="wochuang" class="marginright50">卧床</label>
+          <input type="radio" name="hard" id="duju">
+          <label for="duju" class="marginright50">独居</label>
+          <input type="radio" name="hard" id="nochild">
+          <label for="nochild" class="marginright50">子女不在身边</label>
+          <input type="radio" name="hard" id="hardno">
+          <label for="hardno">无</label>
+        </div>
+        <div class="medhisory">
+          <label class="leftInfo fl">病史及服药状况:</label>
+          <textarea class="medhis">1.慢性支气管炎病史10年，慢性咳嗽、咳痰反复发作，每年发作1~2次，每次发作历时半月至一月，经抗感染、镇咳、祛痰等对症治疗可好转。</textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mask"></div>
+<!-- 会诊原因 -->
+<div class="huizhenReason">
+   <div class="title">
+    <span class="fl span_add">会诊原因</span>
+    <span class="fr close"></span>
+  </div>
+  <div class="reason_content">
+    <textarea>
+    </textarea>
+  </div>
+  <div class="btn-fc">
+    <a href="#" class="confirm btnBg">确认</a>
+    <a href="#" class="cancel btnBg">取消</a>
+  </div>
+</div>
+<!-- 转诊原因 -->
+<div class="zhuanzhenReason">
+  <div class="title">
+    <span class="fl span_add">转诊原因</span>
+    <span class="fr close"></span>
+  </div>
+  <div class="reason_content">
+    <textarea>
+    </textarea>
+  </div>
+  <div class="btn-fc">
+    <a href="#" class="confirm btnBg">确认</a>
+    <a href="#" class="cancel btnBg">取消</a>
+  </div>
+</div>
+<!-- 申请治疗原因 -->
+<div class="zhiliaoReason">
+  <div class="title">
+    <span class="fl span_add">治疗原因</span>
+    <span class="fr close"></span>
+  </div>
+  <div class="reason_content">
+    <textarea>
+    </textarea>
+  </div>
+  <div class="btn-fc">
+    <a href="#" class="confirm btnBg">确认</a>
+    <a href="#" class="cancel btnBg">取消</a>
+  </div>
+</div>
+<!-- 修改密码 -->
+<div class="modify">
+  <div class="title">
+    <span class="fl span_add">修改密码</span>
+    <span class="fr close"></span>
+  </div>
+  <div class="userInfo">
+    <p class="pass"><label>用户名:</label><input type="text" name=""></p>
+    <p class="pass"><label>原密码:</label><input type="text" name=""></p>
+    <p class="pass"><label>新密码:</label><input type="text" name=""></p>
+    <p class="pass"><label>确认密码:</label><input type="text" name=""></p>
+  </div>
+  <a href="#" class="btnBg btnlg">确定</a>
+  <a href="#" class="btnBg btnBg1 cancel_all">取消</a>
+</div>
+</body>
+
+</html>

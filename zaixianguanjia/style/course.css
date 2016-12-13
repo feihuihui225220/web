@@ -1,0 +1,21 @@
+    .row{margin-left:0;margin-right:0;}
+    .search {
+        position: relative;
+    }
+    .search .searchIcon {
+        position: absolute;
+        left: 25px;
+        top: 20px;
+    }
+    .searchInput {
+        padding: 6px 30px;
+        margin:10px auto 15px auto;
+    }
+    .course{position:relative;}
+    .form-control{border:1px solid #8fcaf8;}
+    .thumbnail{padding:0;}
+    .col-xs-12{padding:0;}
+    .searchList{display:none;}
+    .p_item{padding:5px 10px;}
+    .p_item i{margin-right:5px;font-style:normal;}
+    .playIcon{color:#a2a2a2;margin-right:5px;}

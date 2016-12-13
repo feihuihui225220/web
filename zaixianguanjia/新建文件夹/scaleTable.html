@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>测试量表</title>
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+    .times{margin:15px auto;}
+    .activityPic{width:100%;height:100%;}
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h3>有氧耐力-2分钟踏步测试</h3>
+    <p>足够的有氧耐力对执行许多的每日活动是必要的，有氧耐力是重要的体适能要素之一。</p>
+</div>
+<div class="container">
+         <video id="example_video_1" class="video-js vjs-default-skin videoplay1" controls style="height:30%;width:100%;">
+            <source src="video/beike.mp4" type='video/mp4' />
+        </video>
+        <button class="btn btn-info form-control">您的测量数值是多少次?</button>
+        <div class="input-group times">
+          <input type="text" class="form-control">
+          <span class="input-group-addon">次数</span>
+        </div>
+        <a class="btn btn-default pull-right" href="testResult.html">提交</a>
+</div>
+<div class="container">
+    <div>
+        <span>测试前准备工具：</span>
+        <span>秒表(1个)</span>
+    </div>
+    <div>
+        <span>测试步骤：</span>
+        <p>在宽阔的平地上受测者进行原地抬腿动作。抬腿高度至髋关节与膝关节一半处，记录受测者两分钟时间内右腿抬膝达到要求的次数。</p>
+    </div>
+    <div>
+        <span>注意事项：</span>
+        <p>1.平衡较差的参与者应在靠近墙壁和有把手的位置，确保安全性。</p>
+        <p>2.注意受测试者是否出现过度卖力的情况。</p>
+        <p>3.假如受测试者脚步踏的太用力，则提醒他脚步轻柔，以免膝盖不适。</p>
+    </div>
+</div>
+<div class="container"><img src="images/activity.jpg" class="activityPic"></div>
+</body>
+<script>
+$(document).ready(function() {
+
+})
+</script>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>肩周炎</title>
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link href="style/video-js.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <link rel="stylesheet" type="text/css" href="style/courseDetail.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/video.min.js"></script>
+</head>
+
+<body>
+    <!-- 视频 -->
+    <div class="container allVideo">
+         <video id="example_video_1" class="video-js vjs-default-skin videoplay1" controls style="width:100%">
+            <source src="video/beike.mp4" type='video/mp4' />
+        </video>
+        <video id="example_video_2" class="video-js vjs-default-skin videoplay2" controls" style="width:100%">
+            <source src="video/beike1.mp4" type='video/mp4' />
+        </video> 
+        <video id="example_video_3" class="video-js vjs-default-skin videoplay3" controls" style="width:100%">
+            <source src="video/beike.mp4" type='video/mp4' />
+        </video>   
+    </div>
+    <!-- 点赞 浏览人数 -->
+    <div class="container browseNum">
+        <p class="pull-left"><span class="marginRight5">播放</span><i>36478</i></p>
+        <p class="pull-right"><i class="marginRight5">30</i><span class="glyphicon glyphicon-thumbs-up thumbColor"></span></p>
+    </div>
+    <!-- tab页 -->
+    <div class="container listtab">
+        <ul class="row list-intro">
+            <li class="pull-left col-xs-6 text-center active">视频列表</li>
+            <li class="pull-right col-xs-6 text-center">相关介绍</li>
+        </ul>
+        
+        <div class="tabwrap">
+            <!-- 视频列表 -->
+            <div class="videoList">
+                <ul class="media-list">
+                    <li class="media active">
+                        <a class="media-left" href="#">
+                            <img src="images/videorefer.png">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">唐唐脱口秀1</h4>
+                            <p class="intro">周日至五每晚24时更2集</p>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <a class="media-left" href="#">
+                            <img src="images/videorefer.png">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">唐唐脱口秀2</h4>
+                            <p class="intro">周日至五每晚24时更2集</p>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <a class="media-left" href="#">
+                            <img src="images/videorefer.png">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">唐唐脱口秀3</h4>
+                            <p class="intro">周日至五每晚24时更2集</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 视频介绍页 -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h4>1、动作步骤</h4>
+                    <p class="step">人类的基本活动是指维持人类生存所必需的活动。基本活动包括走、跑、跳、投、攀登</p>
+                    <h4>2、注意事项</h4>
+                    <p class="step">人类的基本活动是指维持人类生存所必需的活动。基本活动包括走、跑、跳、投、攀登</p>
+                    <h4>3、动作步骤</h4>
+                    <p class="step">人类的基本活动是指维持人类生存所必需的活动。基本活动包括走、跑、跳、投、攀登</p>
+                </div>
+            </div>
+<!--             <div class="panel panel-default">
+                <div class="panel-body">
+                    <h4>11、动作步骤</h4>
+                    <p class="step">人类的基本活动是指维持人类生存所必需的活动。基本活动包括走、跑、跳、投、攀登</p>
+                    <h4>22、注意事项</h4>
+                    <p class="step">人类的基本活动是指维持人类生存所必需的活动。基本活动包括走、跑、跳、投、攀登</p>
+                    <h4>33、动作步骤</h4>
+                    <p class="step">人类的基本活动是指维持人类生存所必需的活动。基本活动包括走、跑、跳、投、攀登</p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h4>111、动作步骤</h4>
+                    <p class="step">人类的基本活动是指维持人类生存所必需的活动。基本活动包括走、跑、跳、投、攀登</p>
+                    <h4>222、注意事项</h4>
+                    <p class="step">人类的基本活动是指维持人类生存所必需的活动。基本活动包括走、跑、跳、投、攀登</p>
+                    <h4>333、动作步骤</h4>
+                    <p class="step">人类的基本活动是指维持人类生存所必需的活动。基本活动包括走、跑、跳、投、攀登</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</body>
+<script>
+$(document).ready(function() {
+    // 视频列表、介绍选项卡
+    $('.listtab .panel').hide();
+    $('.list-intro li').click(function(){
+        var $div_li=$('.listtab ul li');
+        var index=$div_li.index(this);
+        $(".tabwrap>div").eq(index).show().siblings().hide();
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+    // 列表控制上方视频播放顺序
+    $('.allVideo video:gt(0)').hide();
+    $('.videoList ul li').click(function(){
+        var $video_li=$('.videoList ul li');
+        var index=$video_li.index(this);
+        $(".allVideo>video").eq(index).show().trigger('play').siblings().trigger('pause').hide();
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+})
+</script>
+
+</html>

@@ -1,0 +1,11 @@
+    .header{background:url(../images/personInfoBg.jpg) no-repeat;width:100%;height:150px;background-size:100% 100%;position:relative;}
+    .headerPic{position:absolute;top:24%;left:5%;width:80px;height:80px;border-radius:40px;border:4px solid #88dafb;background:#fff ;background-size:100% 100%;}
+    .login{position:absolute;top:42%;left:38%;}
+    .login .immediately{color:#fff;text-decoration:underline;}
+    .thumbnail{border:none;}
+    .thumbnail img{width:50%;}
+    .col-xs-3{padding:0;}
+    .thumbnail span{display:block;text-align:center;}
+    .navMargin{margin-top:20px;}
+
+

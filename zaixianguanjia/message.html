@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>通知消息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <style>
+    body {width:100%;height:auto;background-size:cover;background:url(images/messageBg.png);}
+    .edit {
+        height: 40px;
+        margin-top:20px;
+    }
+    .btn-warning{color:#dc8200;border:1px solid #dc8200;background-color:#fff;margin-left:20px;}
+    .btn:hover{color:#2094f1;}
+    .btn-own{color:#2094f1;border:1px solid #2094f1;background-color:#fff}
+    label.allSelect{font-size:14px;font-weight:normal;}
+    .butlerMess{width:60px;height:60px;border-radius:30px;border:1px solid #bddaf2;}
+    .butlerContent{padding:10px 5px 10px 15px;background:url(images/dialog.png) no-repeat;width:100%;background-size:cover;}
+    .date{margin-bottom:10px;}
+    .col-xs-3,.col-xs-9{padding:0;}
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="edit">
+            <input type="checkbox" name="qx" id="qx">
+            <label class="allSelect" label for="qx">全选</label>
+            <button class="delete btn btn-warning btn-sm">删除</button>
+            <span class="pull-right btn btn-own editBtn">编辑</span>
+        </div>
+        <div class="messageShow">
+            <div class="message">
+                <div class="currentMessage">
+                    <div class="row container">
+                        <div class="col-xs-3">
+                            <input type="checkbox" name="message">
+                            <img src="images/headPic.png" class="butlerMess">
+                        </div>
+                        <div class="col-xs-9">
+                            <p class="butlerContent font14">
+                              互联网普及化的今天，IT行业已经成为一个高薪行业，也是世界行业发展的趋势。社会快速发展，对人才的需求水涨船高。互联网大环境下衍生出的对职业技能的要求也是不断的up up up。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="date text-right font12">2016年11月17日&nbsp;星期四11：34</div>
+            </div>
+            <div class="message">
+                <div class="currentMessage">
+                    <div class="row container">
+                        <div class="col-xs-3">
+                            <input type="checkbox" name="message">
+                            <img src="images/headPic.png" class="butlerMess">
+                        </div>
+                        <div class="col-xs-9">
+                            <p class="butlerContent font14">
+                              互联网普及化的今天，IT行业已经成为一个高薪行业，也是世界行业发展的趋势。社会快速发展，对人才的需求水涨船高。互联网大环境下衍生出的对职业技能的要求也是不断的up up up。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="date text-right font12">2016年11月17日&nbsp;星期四11：34</div>
+            </div>
+            <div class="message">
+                <div class="currentMessage">
+                    <div class="row container">
+                        <div class="col-xs-3">
+                            <input type="checkbox" name="message">
+                            <img src="images/headPic.png" class="butlerMess">
+                        </div>
+                        <div class="col-xs-9">
+                            <p class="butlerContent font14">
+                              互联网普及化的今天，IT行业已经成为一个高薪行业，也是世界行业发展的趋势。社会快速发展，对人才的需求水涨船高。互联网大环境下衍生出的对职业技能的要求也是不断的up up up。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="date text-right font12">2016年11月17日&nbsp;星期四11：34</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('input:checkbox').each(function() {
+        $(this).hide();
+        $('.allSelect').hide();
+        $('.delete').hide();
+    });
+// 编辑
+    $('.editBtn').click(function(){
+      $('.allSelect').toggle();
+      $('.delete').toggle();
+      $('input:checkbox').toggle();
+        if($('.editBtn').html()=='编辑'){
+            $(this).html('取消');
+            $(this).removeClass('btn-own');
+            $(this).css('color','#4d4d4d');
+        }
+        else{
+            $(this).html('编辑');
+            $(this).addClass('btn-own');
+            $(this).css('color','#2094f1');
+        }
+    })
+// 全选
+  $('#qx,[name="qx"]').click(function(){
+  $('#qx,[name="message"]').prop('checked',($(this).prop('checked')));
+  })
+// 删除
+ $('.delete').click(function(){
+  if(confirm('确定要删除所选消息吗？')){
+  $("input:checkbox[name='message']:checked").parent().parent().parent().parent().remove();
+  }
+  })
+
+})
+</script>
+
+</html>

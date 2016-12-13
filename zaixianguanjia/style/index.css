@@ -1,0 +1,46 @@
+    /*首页轮播*/
+    .carousel-indicators {
+        bottom: -2px;
+    }
+    .carousel-indicators li {border:1px solid #fff;}
+    .carousel-indicators .active{background:#fff;}
+    #secondCarousel .carousel-indicators{bottom:-30px;}
+    .daohang{margin-top:15px;}
+    /*导航*/
+    .margintop10{display:inline-block;margin-top:10px;}
+    .col-xs-4{padding:0;}
+    /*线上评估轮播*/
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets{bottom:0;}
+    .swiper-slide .suolue{display:block;text-align:center;}
+    .swiper-slide{position:relative;}
+    .swiper-slide .suolue span{display:inline-block;width:192px;color:#fff;position:absolute;left:50%;margin-left:-96px;bottom:10%;font-size:16px;font-weight:normal;}
+    .col-xs-6{padding:0 8px 0 0;}
+  /*管家*/
+    .thumbnail{border:none;margin-bottom:0;}
+    .col-xs-3{padding:0;}
+    .row{margin:0;}
+    .jobTitle{font-size:11px;margin-top:5px;}
+    .imgBorder{border:1px solid #fff3e2;}

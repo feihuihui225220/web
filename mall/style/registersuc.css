@@ -1,0 +1,7 @@
+.register_top{width:1200px;margin:0 auto;margin-top:30px;}
+.register_top .welcome{display:inline-block;font-size:30px;color:#3c3c3c;border-left:1px solid #d6d6d6;margin-left:26px;margin-bottom:22px;text-indent:0.6em;}
+.register_main{width:1200px;height:600px;margin:0 auto;}
+.register_main .wrap{width:250px;height:250px;margin-left:45%;margin-top:100px;}
+.register_main .wrap label{font-size:24px;color:#e86a0a;margin-left:10px;}
+.suclogin{font-size:16px;height:40px;line-height:40px;}
+.register_main .wrap .login{display:inline-block;width:90px;height:30px;line-height:30px;background-color:#e86a0a;color:#fff;font-size:16px;text-align:center;margin-top:30px;margin-left:60px;}

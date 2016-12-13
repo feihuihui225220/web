@@ -1,0 +1,36 @@
+    /*浏览*/
+    .browseNum{margin:10px auto;}
+    .browseNum p {
+        margin-right: 10px;
+    }
+    .browseNum p i {
+        font-style: normal;
+        font-size: 16px;
+    }
+    .list-intro li {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 5px;
+        font-size:18px;
+    }
+    .list-intro li.active{color:#2095f2;}
+    
+    .list-intro li:first-child {
+        border-right: 1px solid #ccc;
+    }
+    /*视频*/
+
+    .videoList {
+        margin-top: 15px;
+    }
+    .thumbColor{color:#2095f2;font-size:18px;}
+    .marginRight5{margin-right:5px;}
+    .media img{width:120px;height:80px;}
+    /*视频列表*/
+    .media{padding:10px;border:1px solid #ececec;}
+    .videoList ul li.active{background:url(../images/play.png) no-repeat 80% center;}
+    .list-intro{background-color:#e5e5e5;}
+    .media .intro{color:#575757;margin-top:20px;}
+    /*相关介绍*/
+    .panel-default{border:none;}
+    .step{font-size:16px;margin:10px auto;color:#575757;}

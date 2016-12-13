@@ -1,0 +1,24 @@
+.main_right input{font-size:18px;padding-left:15px;}
+.font16{font-size:16px;}
+.boxset{width:183px;height:30px;border:1px solid #a6ba76;border-radius:5px;}
+.boxset1{width:300px;height:30px;border:1px solid #a6ba76;border-radius:5px;}
+.otherset{width:40px;height:30px;border:1px solid #a6ba76;border-radius:5px;margin-left:10px;margin-right:10px;}
+.timeset{width:115px;height:30px;border:1px solid #a6ba76;border-radius:5px;}
+.addressSet{width:80px;height:28px;border:1px solid #a6ba76;border-radius:5px;margin-right:10px;}
+.textareaSet{width:547px;height:92px;border:1px solid #a6ba76;border-radius:5px;}
+.col1{text-align:right;padding-right:25px;}
+
+.orderInfo{position:absolute;left:385px;top:38px;padding-bottom:15px;border-bottom:1px solid #959595;}
+.main_right .match{position:absolute;left:385px;top:384px;}
+.main_right .match p{font-size:24px;color:#aad253;margin-bottom:15px;}
+.orderInfo{width:1000px;}
+.orderInfo td{font-size:18px;height:40px;}
+.main_right .return{color:#498949;font-size:18px;position:absolute;left:1262px;top:16px;}
+/*表格*/
+.match-table{width:800px;text-align:center;border:1px solid #bfbfbf;border-collapse: collapse;margin-top:20px;}
+.match-table th{background:#dff0d8;}
+.match-table tr th, td{height:44px;}
+.match-table tr th{height:54px;}
+.match-table tr:nth-child(odd){background:#efeeee;}
+.match-table td:last-child a{color:#327e33;margin-right:5px;}
+.choose{color:#aad253;}

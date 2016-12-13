@@ -1,0 +1,10 @@
+
+.paysuc{width:1200px;height:600px;margin:0 auto;}
+.paysuc .content{width:300px;height:300px;margin-top:100px;margin-left:450px;}
+.paysuc .content h3{width:100%;text-align:center;font-size:24px;color:#ff5700;margin-bottom:20px;}
+.paysuc .content div{height:40px;line-height:40px;margin-left:50px;}
+.paysuc .content div span{font-size:14px;color:#545454;}
+.content .span_pay{display:inline-block;width:100px;text-align:right;}
+.content div .gw,.kf{display:inline-block;width:100px;height:35px;margin-right:15px;margin-top:25px;font-size:16px;text-align:center;}
+.content div .gw{background-color:#53c226;color:#fff;border-radius:5px;}
+.content div .kf{background-color:#ccc;border-radius:5px;}
